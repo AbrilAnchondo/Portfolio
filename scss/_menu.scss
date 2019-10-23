@@ -6,12 +6,36 @@
     top: 35;
     cursor: pointer;
     @include easeOut;
-}
 
-.btn-line {
-    width: 28px;
-    height: 3px;
-    margin: 0 0 5px 0;
-    background: #fff;
-    @include easeOut;
+
+    .btn-line {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: #fff;
+        @include easeOut;
+    }
+
+    //create an x with the menu lines with top and bottoms lines from menu icon, the middle one will go away
+    &.close {
+        transform: rotate(180deg);
+
+        .btn-line {
+            //first line
+            //seudo selector nth child to select each one
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            //second line
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            //third line
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+        }
+    }
 }
