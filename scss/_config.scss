@@ -1,5 +1,5 @@
-$primary-color: #444;
-$secondary-color: #9370DB;
+$primary-color: rgb(182, 183, 184);
+$secondary-color: rgb(95, 127, 133);
 $show-home-image: true;
 $home-image: url('../images/work.jpeg');
 $background-opacity: 0.9;
@@ -16,7 +16,6 @@ $background-opacity: 0.9;
             background-attachment: fixed;
             background-size: cover;
             
-            &:after {
                 //absolute to cover the whole body
                 content: '';
                 position: absolute;
