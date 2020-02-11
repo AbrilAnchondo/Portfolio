@@ -12,7 +12,7 @@ body {
     color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
-    font-family: 'Verdana', Tahoma, Geneva, Impact, sans-serif;
+    font-family: 'Anaheim', sans-serif, Tahoma, Geneva, Impact, sans-serif;
     line-height: 1.5;
 }
 
@@ -21,7 +21,7 @@ h1, h2, h3 {
     margin: 0;
     font-weight: 400;
 
-    //this refers to a class of lg-heading attached to h1,h1 or h3 and not a class lg-heading nested within, so I need an & meaning an h1 with its own class lg heading
+    //this refers to a class of lg-heading attached not nested within it, to h1,h1 or h3 and not a class lg-heading nested within, so I need an & meaning an h1 with its own class lg heading
     //rem is a multiplier of the font size (1rem is 16px)
     //rgb to see through
     &.lg-heading {
@@ -80,8 +80,14 @@ main {
         //overflow will eliminate any scroll bars
         overflow: hidden;
         h1 {
-            margin-top: 20vh;
+            margin-top: 25vh;
         }
+        
+    }
+
+    .name {
+        font-family: 'Dr Sugiyama', cursive;
+        font-size: 8em;
     }
 }
 

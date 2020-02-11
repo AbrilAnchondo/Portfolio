@@ -1,7 +1,7 @@
 $primary-color: rgb(182, 183, 184);
-$secondary-color: rgb(95, 127, 133);
+$secondary-color: rgb(190, 120, 144);
 $show-home-image: true;
-$home-image: url('../images/work.jpeg');
+$home-image: url('../images/homeimage.jpg');
 $background-opacity: 0.9;
 
 //mixins are functions
@@ -9,6 +9,7 @@ $background-opacity: 0.9;
     transition: all 0.6s ease-out;
 }
 
+//mixin for the homepage image
 @mixin background {
     @if $show-home-image {
         &#bg-img {
@@ -17,6 +18,7 @@ $background-opacity: 0.9;
             background-size: cover;
             
                 //absolute to cover the whole body
+                &:after {
                 content: '';
                 position: absolute;
                 top: 0;

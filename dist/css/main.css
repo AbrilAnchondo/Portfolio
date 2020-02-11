@@ -58,14 +58,14 @@
       background: url("../images/headshotAbril.jpg");
       background-size: cover;
       border-radius: 50%;
-      border: solid 3px #5f7f85; }
+      border: solid 3px #be7890; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.6s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current {
-      color: #5f7f85; }
+      color: #be7890; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -77,7 +77,7 @@
     text-decoration: none;
     transition: all 0.6s ease-out; }
     .menu .nav-link:hover {
-      color: #5f7f85; }
+      color: #be7890; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -131,10 +131,10 @@ body {
   color: #000;
   height: 100%;
   margin: 0;
-  font-family: 'Verdana', Tahoma, Geneva, Impact, sans-serif;
+  font-family: 'Anaheim', sans-serif, Tahoma, Geneva, Impact, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url("../images/work.jpeg");
+    background: url("../images/homeimage.jpg");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -168,7 +168,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #5f7f85; }
+  color: #be7890; }
 
 main {
   padding: 4rem;
@@ -178,12 +178,15 @@ main {
     main .icons a {
       padding: 0.5rem; }
       main .icons a:hover {
-        color: #5f7f85;
+        color: #be7890;
         transition: all 0.6s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
-      margin-top: 20vh; }
+      margin-top: 25vh; }
+  main .name {
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 8em; }
 
 .about-info {
   display: grid;
@@ -196,7 +199,7 @@ main {
   margin: auto;
   height: 250px;
   width: 300px;
-  border: #5f7f85 3px solid; }
+  border: #be7890 3px solid; }
 
 .bio {
   grid-area: bio;
@@ -214,7 +217,7 @@ main {
 .job {
   background: #c3c4c5;
   padding: 0.5rem;
-  border-bottom: #5f7f85 5px solid; }
+  border-bottom: #be7890 5px solid; }
 
 #main-footer {
   text-align: center;
