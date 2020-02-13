@@ -107,8 +107,9 @@ main {
     margin: auto;
     height: 250px;
     width: 100%;
-    //border-radius: 50%;
+    border-radius: 10px;
     //border: $secondary-color 3px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .bio {
@@ -132,7 +133,52 @@ main {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+    border-radius: 10px;
 }
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+
+    img {
+        width: 100%;
+        border: 3px white solid;
+        border-radius: 3px;
+
+        &:hover {
+            opacity: 0.7;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.2rem;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-color-text($secondary-color);
+    }
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 10);
+    color: black;
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 30);
+    color: white;
+}
+
+
 
 #main-footer {
     text-align: center;
