@@ -92,38 +92,6 @@
 .nav-item:nth-child(5) {
   transition-delay: 1s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav, div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show, div.menu-branding.show {
-      transform: translate3d(0, 0, 0);
-      border-bottom: 1mm ridge #9c2323; }
-  .menu-nav {
-    height: 60vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 40vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../images/headshotAbril.jpg");
-      height: 100%;
-      width: 100%;
-      background-size: 100%;
-      background-repeat: no-repeat; } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
-
 * {
   box-sizing: border-box; }
 
@@ -199,8 +167,7 @@ main {
   grid-area: bioimage;
   margin: auto;
   height: 250px;
-  width: 300px;
-  border: #9e1d1d 3px solid; }
+  width: 100%; }
 
 .bio {
   grid-area: bio;
@@ -225,4 +192,39 @@ main {
   padding: 1rem;
   background: #9c9e9f;
   color: #000;
-  height: 55px; }
+  height: 65px; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show, div.menu-branding.show {
+      transform: translate3d(0, 0, 0);
+      border-bottom: 1mm ridge #9c2323; }
+  .menu-nav {
+    height: 60vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 40vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../images/headshotAbril.jpg");
+      height: 100%;
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }

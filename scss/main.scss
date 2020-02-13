@@ -1,6 +1,6 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
+
 
 * {
     box-sizing: border-box;
@@ -58,6 +58,7 @@ header {
 main {
     padding: 4rem;
     //height: 100%;
+    //this calc is in main which is the element above the footer, this is to make the footer stick at the bottom
     min-height: calc(100vh - 55px);
 
     //targets class of icons inside main
@@ -105,9 +106,9 @@ main {
     grid-area: bioimage;
     margin: auto;
     height: 250px;
-    width: 300px;
+    width: 100%;
     //border-radius: 50%;
-    border: $secondary-color 3px solid;
+    //border: $secondary-color 3px solid;
 }
 
 .bio {
@@ -138,8 +139,9 @@ main {
     padding: 1rem;
     background: darken($primary-color, 10);
     color: set-text-color($primary-color);
-    height: 55px;
+    height: 65px;
 }
 
-
+//media queries should run after the initial css
+@import 'mobile';
 
