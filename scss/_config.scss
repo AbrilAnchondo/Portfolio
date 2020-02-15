@@ -1,10 +1,15 @@
 //$primary-color: rgb(182, 183, 184);
-$primary-color: rgb(211, 213, 214);
-//$secondary-color: rgb(190, 120, 144);
-$secondary-color: rgb(158, 29, 29);
+$primary-color: rgb(188, 188, 189);
+//$primary-color: rgb(211, 213, 214);
+//$secondary-color: rgb(184, 129, 167);
+$secondary-color: rgb(175, 118, 138);
+//$secondary-color: rgb(158, 29, 29);
 $show-home-image: true;
 $home-image: url('../images/homeimage.jpg');
+$show-contact-image: true;
+$contact-image: url('../images/vintagePhone.jpg');
 $background-opacity: 0.9;
+$box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 //mixins are functions
 @mixin easeOut {
@@ -16,6 +21,28 @@ $background-opacity: 0.9;
     @if $show-home-image {
         &#bg-img {
             background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+            
+                //absolute to cover the whole body
+                &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba($primary-color, $background-opacity);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+@mixin contact {
+    @if $show-contact-image {
+        &#contact-img {
+            background: $contact-image;
             background-attachment: fixed;
             background-size: cover;
             
