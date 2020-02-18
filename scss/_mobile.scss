@@ -11,6 +11,9 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 //tablets & small laptops
@@ -65,9 +68,16 @@
         grid-template-columns: 1fr;
     }
 
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
+    .passion-boxes {
+        grid-template-columns: repeat(2, 1fr);;
+
+        div {
+            height: 500px;
+            width: 100%;
+        }
     }
+
+
 }
 
 //mobile
@@ -78,5 +88,14 @@
 
     .projects {
         grid-template-columns: 1fr;
+    }
+
+    .passion-boxes {
+        grid-template-columns: 1fr;
+
+        div {
+            height: 500px;
+            width: 100%;
+        }
     }
 }
