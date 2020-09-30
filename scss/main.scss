@@ -1,7 +1,6 @@
 @import 'config';
 @import 'menu';
 
-
 * {
     box-sizing: border-box;
 }
@@ -12,7 +11,8 @@ body {
     color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
-    font-family: 'Barlow', sans-serif, Tahoma, Geneva, Impact, sans-serif;
+    // font-family: 'Dr Sugiyama', cursive;
+    font-family: 'Verdana', sans-serif, Tahoma, Geneva, Impact, sans-serif;
     line-height: 1.5;
 }
 
@@ -87,7 +87,7 @@ main {
     }
 
     .title {
-        font-family: 'Dr Sugiyama', cursive;
+        // font-family: 'Dr Sugiyama', cursive;
         font-size: 8em;
         font-weight: 150;
     }
@@ -196,6 +196,10 @@ aside {
     text-align: center;
 }
 
+main#passions {
+    padding: 2rem;
+}
+
 .pass-boxes {
     margin: 10%;
     display: grid;
@@ -232,7 +236,7 @@ aside {
         overflow: hidden;
         width: 100%;
         height:0;
-        transition: .5s ease;
+        transition: .8s ease;
         border-radius: 10px;
       }
       

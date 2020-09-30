@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #c6c8ca;
+    background: #e7e5e7;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.6s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #d3d5d6;
+    background: #f3f2f3;
     transform: translate3d(0, 100%, 0);
     transition: all 0.6s ease-out; }
     .menu-branding.show {
@@ -96,11 +96,11 @@
   box-sizing: border-box; }
 
 body {
-  background: #d3d5d6;
+  background: #f3f2f3;
   color: #000;
   height: 100%;
   margin: 0;
-  font-family: 'Barlow', sans-serif, Tahoma, Geneva, Impact, sans-serif;
+  font-family: 'Verdana', sans-serif, Tahoma, Geneva, Impact, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url("../images/homeimage.jpg");
@@ -113,7 +113,7 @@ body {
       right: 0;
       height: 100%;
       width: 100%;
-      background: rgba(211, 213, 214, 0.9);
+      background: rgba(243, 242, 243, 0.9);
       z-index: -1; }
 
 h1, h2, h3 {
@@ -125,7 +125,7 @@ h1, h2, h3 {
     font-size: 2rem;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(216, 218, 219, 0.5); }
+    background: rgba(248, 247, 248, 0.5); }
 
 a {
   text-decoration: none;
@@ -154,7 +154,6 @@ main {
     main#home h1 {
       margin-top: 25vh; }
   main .title {
-    font-family: 'Dr Sugiyama', cursive;
     font-size: 8em;
     font-weight: 150; }
 
@@ -190,7 +189,7 @@ main {
   height: 300px; }
 
 .job {
-  background: #e0e2e2;
+  background: white;
   padding: 0.5rem;
   border-bottom: #6c208f 5px solid;
   border-radius: 10px; }
@@ -220,7 +219,7 @@ main {
     padding: 1.5rem 2.5rem;
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background: #d8dadb;
+    background: #f8f7f8;
     border-radius: 10px;
     text-align: center;
     transition: all 0.6s ease-out; }
@@ -236,6 +235,9 @@ main#contact {
 
 aside {
   text-align: center; }
+
+main#passions {
+  padding: 2rem; }
 
 .pass-boxes {
   margin: 10%;
@@ -264,7 +266,7 @@ aside {
     overflow: hidden;
     width: 100%;
     height: 0;
-    transition: .5s ease;
+    transition: .8s ease;
     border-radius: 10px; }
   .pass-boxes .pass-container:hover .overlay {
     bottom: 0;
@@ -292,7 +294,7 @@ aside {
     color: set-color-text(#6c208f); }
 
 .btn-light {
-  background: #edeeef;
+  background: white;
   color: black;
   margin-top: 0.1rem; }
 
@@ -312,13 +314,13 @@ aside {
     right: 0;
     height: 100%;
     width: 100%;
-    background: rgba(211, 213, 214, 0.9);
+    background: rgba(243, 242, 243, 0.9);
     z-index: -1; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #9ea3a5;
+  background: #c2bdc2;
   color: #000;
   height: 65px; }
 
