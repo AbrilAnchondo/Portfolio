@@ -100,7 +100,7 @@ body {
   color: #000;
   height: 100%;
   margin: 0;
-  font-family: 'Verdana', sans-serif, Tahoma, Geneva, Impact, sans-serif;
+  font-family: 'Roboto', sans-serif, Tahoma, Geneva, Impact, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url("../images/homeimage.jpg");
@@ -154,6 +154,7 @@ main {
     main#home h1 {
       margin-top: 25vh; }
   main .title {
+    font-family: 'Dr Sugiyama', cursive;
     font-size: 8em;
     font-weight: 150; }
 
