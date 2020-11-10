@@ -282,6 +282,11 @@ aside {
     transform: translate(-50%, -50%);
     text-align: center; }
 
+span.passion {
+  color: #6c208f;
+  font-family: 'Dr Sugiyama', cursive;
+  font-size: 3rem; }
+
 .btn, .btn-light, .btn-dark {
   display: block;
   padding: 0.5rem 1rem;
@@ -289,7 +294,7 @@ aside {
   margin-bottom: 0.1rem; }
   .btn:hover, .btn-light:hover, .btn-dark:hover {
     background: #6c208f;
-    color: set-color-text(#6c208f); }
+    color: #6c208f; }
 
 .btn-light {
   background: white;

@@ -257,8 +257,14 @@ aside {
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
-      }
+      } 
 
+}
+
+span.passion {
+    color: $secondary-color;
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 3rem;
 }
 
 .btn {
@@ -269,7 +275,7 @@ aside {
 
     &:hover {
         background: $secondary-color;
-        color: set-color-text($secondary-color);
+        color: $secondary-color;
     }
 }
 
