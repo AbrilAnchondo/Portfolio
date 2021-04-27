@@ -1,11 +1,13 @@
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap" rel="stylesheet" rel="preload" as="style">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=block" rel="stylesheet" rel="preload" as="style">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
   <title>Passions</title>
+  <script defer src="js/main.js"></script> 
 </head>
 <body>
   <header>
@@ -48,49 +50,55 @@
    </nav>
   </header>
 
-  <main id="passions">
+  <main id="passions" class="flex-grid">
     <h1 class="lg-heading title">
       Other 
-       <span class="text-secondary">Interests</span>
+        <span class="text-secondary">Interests</span>
     </h1>
     <h2 class="sm-heading">
       I'm also passionate about...
     </h2>
-    <div class="pass-boxes">
-      <div class="pass-container">
-        <img src="images/dancePortfolio.jpeg" alt="dance" class="pass-img"/>
-        <div class="overlay">
-          <div class="text"><span class="passion">Dance</span>. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+    <div class="gallery-row">
+      <div class="gallery-column">
+        <div class='passion-img-container'>
+          <img src="images/dancePortfolio.jpeg" alt="dance" class="passion-img"/>
+          <div class="overlay description">
+            <span class="passion">Dance </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facilis quaerat fugit maxime qui consectetur quam aut ullam, officiis facere, dolorum esse aspernatur error at illo blanditiis ex perferendis corrupti? Fuga debitis, ab ipsum commodi beatae dolorum dolor mollitia facere.
+          </div>
+        </div>
+        <div class="passion-img-container">
+          <img src="images/travelPortfolio.jpg" alt="travel" class="passion-img-container"/>
+          <div class="overlay description">
+            <span class="passion">Travel & Culture </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facilis quaerat fugit maxime qui consectetur quam aut ullam, officiis facere, dolorum esse aspernatur error at illo blanditiis ex perferendis corrupti? Fuga debitis, ab ipsum commodi beatae dolorum dolor mollitia facere.
+          </div>
         </div>
       </div>
-      <div class="pass-container">
-        <img src="images/naturalWorldPortfolio.jpg" alt="nature" class="pass-img"/>
-        <div class="overlay">
-          <div class="text"><span class="passion">The Environment</span>. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+      <div class="gallery-column">
+        <div class="passion-img-container">
+          <img src="images/naturalWorldPortfolio.jpg" alt="nature" class="passion-img"/>
+          <div class="overlay description">
+            <span class="passion">Environment </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facilis quaerat fugit maxime qui consectetur quam aut ullam, officiis facere, dolorum esse aspernatur error at illo blanditiis ex perferendis corrupti? Fuga debitis, ab ipsum commodi beatae dolorum dolor mollitia facere.
+          </div>
+        </div>
+        <div class="passion-img-container">
+          <img src="images/selfTaughtPortfolio.jpg" alt="hobby" class="passion-img"/>
+          <div class="overlay description">
+            <span class="passion">Arts & Crafts </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facilis quaerat fugit maxime qui consectetur quam aut ullam, officiis facere, dolorum esse aspernatur error at illo blanditiis ex perferendis corrupti? Fuga debitis, ab ipsum commodi beatae dolorum dolor mollitia facere.
+          </div>
         </div>
       </div>
-      <div class="pass-container">
-        <img src="images/veganPortfolio.jpg" alt="plants" class="pass-img"/>
-        <div class="overlay">
-          <div class="text"><span class="passion">Healthy Eating</span>. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+      <div class="gallery-column">
+        <div class="passion-img-container">
+          <img src="images/veganPortfolio.jpg" alt="plants" class="passion-img"/>
+          <div class="overlay description">
+            <span class="passion">Healthy Food </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facilis quaerat fugit maxime qui consectetur quam aut ullam, officiis facere, dolorum esse aspernatur error at illo blanditiis ex perferendis corrupti? Fuga debitis, ab ipsum commodi beatae dolorum dolor mollitia facere.
+          </div>
         </div>
-      </div>
-      <div class="pass-container">
-        <img src="images/yogaPortfolio.jpg" alt="yoga" class="pass-img"/>
-        <div class="overlay">
-          <div class="text"><span class="passion">Life Balance</span>. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
-        </div>
-      </div>
-      <div class="pass-container">
-        <img src="images/travelPortfolio.jpg" alt="travel" class="pass-img"/>
-        <div class="overlay">
-          <div class="text"><span class="passion">Travel & Culture</span>. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
-        </div>
-      </div>
-      <div class="pass-container">
-        <img src="images/selfTaughtPortfolio.jpg" alt="hobby" class="pass-img"/>
-        <div class="overlay">
-          <div class="text"><span class="passion">Arts & Crafts</span>. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+        <div class="passion-img-container">
+          <img src="images/yogaPortfolio.jpg" alt="yoga" class="passion-img"/>
+          <div class="overlay description">
+            <span class="passion">Mindfulness </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facilis quaerat fugit maxime qui consectetur quam aut ullam, officiis facere, dolorum esse aspernatur error at illo blanditiis ex perferendis corrupti? Fuga debitis, ab ipsum commodi beatae dolorum dolor mollitia facere.
+          </div>
         </div>
       </div>
     </div>
@@ -99,7 +107,6 @@
   <footer id="main-footer">
     Copyright &copy; 2020
   </footer>
-  <script src="https://kit.fontawesome.com/7d0ffbca62.js" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>  
+  <script src="https://kit.fontawesome.com/7d0ffbca62.js" crossorigin="anonymous"></script> 
 </body>
 </html>

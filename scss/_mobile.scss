@@ -1,27 +1,27 @@
 //wide screens
 @include mediaExtraLarge {
-    .projects {
-        grid-template-columns: repeat(4, 1fr);
-    }
+    // .projects {
+    //     grid-template-columns: repeat(4, 1fr);
+    // }
 
-    .pass-boxes {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    // .pass-boxes {
+    //     grid-template-columns: repeat(3, 1fr);
+    // }
 }
 
 //desktops & laptops
 @include mediaLarge {
-    .projects {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    // .projects {
+    //     grid-template-columns: repeat(3, 1fr);
+    // }
 
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    // .projects {
+    //     grid-template-columns: repeat(2, 1fr);
+    // }
 
-    .pass-boxes {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    // .pass-boxes {
+    //     grid-template-columns: repeat(2, 1fr);
+    // }
 }
 
 //tablets & small laptops
@@ -66,25 +66,40 @@
     }
 
     .about-info {
+        grid-template-areas: 
+            'bioimage'
+            'bio'
+            'job1'
+            'descjob1'
+            'job2'
+            'descjob2'
+            'job3'
+            'descjob3';
+        grid-template-columns: 1fr;
+    }
+
+    .bio {
+        overflow: auto;
+    }
+
+    .projects-container {
         grid-template-areas:
-        'bioimage'
-        'bio'
-        'job1'
-        'job2'
-        'job3';
-
+        'project1'
+        'descproject1'
+        'project2'
+        'descproject2'
+        'project3'
+        'descproject3'
+        'project4'
+        'descproject4'
+        ;
         grid-template-columns: 1fr;
     }
 
-    .pass-boxes {
-        grid-template-columns: 1fr;
+    .flex-grid .gallery-column {
+        flex: 100%;
+        max-width: 100%;
     }
-
-    .projects {
-        grid-template-columns: 1fr;
-    }
-
-
 }
 
 //mobile
@@ -93,11 +108,8 @@
         margin-top: 10vh;
     }
 
-    .projects {
-        grid-template-columns: 1fr;
-    }
-
-    .pass-boxes {
-        grid-template-columns: 1fr;
+    .flex-grid .gallery-column {
+        flex: 100%;
+        max-width: 100%;
     }
 }

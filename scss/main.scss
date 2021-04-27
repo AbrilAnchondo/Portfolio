@@ -69,6 +69,8 @@ main {
 
         a {
             padding: 0.5rem;
+            //color: rgb(159, 126, 175);
+            color: white;
             &:hover {
                 color: $secondary-color;
                 @include easeOut();
@@ -88,6 +90,7 @@ main {
 
     .title {
         font-family: 'Dr Sugiyama', cursive;
+        //font-family: 'Brush Script MT', cursive;
         font-size: 8em;
         font-weight: 150;
     }
@@ -95,176 +98,176 @@ main {
 
 .about-info {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 15px;
     grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
-    grid-template-columns: 1fr 1fr 1fr;
+    'bioimage bioimage'
+    'bio bio'
+    'job1 descjob1'
+    'job2 descjob2'
+    'job3 descjob3';
+    grid-template-columns: 1fr 1fr;
 }
 
 //creating grid areas
 .bio-image {
     grid-area: bioimage;
     margin: auto;
-    height: 300px;
+    //height: 300px;
+    height: 450px;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: $box-shadow;
+    object-fit: cover;
 }
 
 .bio {
     grid-area: bio;
     font-size: 1.5rem;
-    height: 300px;
+    padding: 0.5rem;
+    //height: 300px;
+    height: 450px;
+    border-radius: 5px;;
+    background: lighten($primary-color, 5);
 }
 
 .job-1 {
     grid-area: job1;
     height: 300px;
+    border-right: $secondary-color 5px solid;
+}
+
+.desc-job1 {
+    grid-area: descjob1;
+    height: 300px;
+    border-left: $secondary-color 5px solid;
 }
 
 .job-2 {
     grid-area: job2;
     height: 300px;
+    border-right: rgb(13, 123, 167) 5px solid;
+}
+
+.desc-job2 {
+    grid-area: descjob2;
+    height: 300px;
+    border-left: rgb(13, 123, 167) 5px solid;
 }
 
 .job-3 {
     grid-area: job3;
     height: 300px;
+    border-right: rgb(218, 193, 6) 5px solid;
+}
+
+.desc-job3 {
+    grid-area: descjob3;
+    height: 300px;
+    border-left: rgb(218, 193, 6) 5px solid;
 }
 
 .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
-.projects {
+.desc {
+    //border-right: $secondary-color 5px solid;
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+// My Work & Projects
+.projects-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
-  
-    img {
-        width: 100%;
-        height: 225px;
-        //border: 3px white solid;
-        border-radius: 10px 10px 0 0;
-        box-shadow: $box-shadow;
+    grid-template-areas: 
+    'project1 descproject1'
+    'project2 descproject2'
+    'project3 descproject3'
+    'project4 descproject4';
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.project1 {
+    grid-area: project1;
+    height: 300px;
+    border-right: $secondary-color 5px solid;
+}
+
+.desc-project1 {
+    grid-area: descproject1;
+    height: 300px;
+    border-left: $secondary-color 5px solid;
+}
+
+.project2 {
+    grid-area: project2;
+    height: 300px;
+    border-right: rgb(167, 20, 154) 5px solid;
+}
+
+.desc-project2 {
+    grid-area: descproject2;
+    height: 300px;
+    border-left: rgb(167, 20, 154) 5px solid;
+}
+
+.project3 {
+    grid-area: project3;
+    height: 300px;
+    border-right: rgb(218, 193, 6) 5px solid;
+}
+
+.desc-project3 {
+    grid-area: descproject3;
+    height: 300px;
+    border-left: rgb(218, 193, 6) 5px solid;
+}
+
+.project4 {
+    grid-area: project4;
+    height: 300px;
+    border-right: rgb(58, 146, 17) 5px solid;
+}
+
+.desc-project4 {
+    grid-area: descproject4;
+    height: 300px;
+    border-left: rgb(58, 146, 17) 5px solid;
+}
+
+.projects-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    //box-shadow: $box-shadow;
 
         &:hover {
-            opacity: 0.7;
-            border-color: $secondary-color;
+            opacity: 0.6;
             @include easeOut;
         }
+}
+
+.projects-container .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn-links {
+        width: 100%;
     }
 }
 
-.boxes {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-evenly;
-   align-items: center;
-   margin-top: 1rem;
 
-    div {
-        font-size: 1.5rem;
-        padding: 1.5rem 2.5rem;
-        margin-bottom: 1rem;
-        box-shadow: $box-shadow;
-        background: rgba(lighten($primary-color, 2), 1);
-        border-radius: 10px;
-        text-align: center;
-        @include easeOut;
-
-        &:hover {
-            background: $secondary-color;
-            color: set-text-color($secondary-color);
-            span {
-                color: set-text-color($secondary-color);
-            }
-        }
-    }
-}
-
-main#contact {
-    min-height: calc(100vh - 55px);
-    text-align: center;
-}
-
-aside {
-    text-align: center;
-}
-
-// main#passions {
-//     padding: 2rem;
-// }
-
-.pass-boxes {
-    margin: 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-  
-    div {
-        height: 575px;
-        width: 100%;
-
-        &:hover {
-            box-shadow: 0 25px 50px 0 black;
-        }
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        box-shadow: $box-shadow; 
-    }
-
-    .pass-container {
-        position: relative;
-        width: 100%;
-      }
-
-    .overlay {
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-        right: 0;
-        background-color: rgb(240, 236, 247);
-        overflow: hidden;
-        width: 100%;
-        height:0;
-        transition: .8s ease;
-        border-radius: 10px;
-      }
-      
-      .pass-container:hover .overlay {
-        bottom: 0;
-        height: 100%;
-      }
-      
-      .text {
-        padding: 30px;
-        overflow: scroll;
-        color: black;
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center;
-      } 
-
-}
-
-span.passion {
-    color: $secondary-color;
-    font-family: 'Dr Sugiyama', cursive;
-    font-size: 3rem;
+.project {
+    border-radius: 5px;
+    box-shadow: $box-shadow;
 }
 
 .btn {
@@ -274,7 +277,7 @@ span.passion {
     margin-bottom: 0.1rem;
 
     &:hover {
-        background: rgb(141, 88, 165);
+        opacity: 0.5;
         color: $secondary-color;
     }
 }
@@ -290,15 +293,110 @@ span.passion {
     @extend .btn;
     background: darken($primary-color, 100);
     color: white;
-    border-radius:  0 0 10px 10px;
+}
+
+// Other interests - flex grid
+.flex-grid .gallery-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 0;
+}
+
+.flex-grid .gallery-column {
+    flex: 33%;
+    max-width: 35%;
+}
+
+.flex-grid img {
+width: 100%;
+height: 600px;
+object-fit: cover;
+padding: 3px;
+border-radius: 8px;
+}
+
+ // img overlay
+.passion-img-container {
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(248, 240, 248, 0.7);
+    color: black;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    opacity:0;
+    font-size: 1rem;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: $secondary-color 3px solid;
+}
+
+
+.passion-img-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 65px;
+}
+.passion-img-container span {
+    font-size: 3rem;
+    color: $secondary-color;
+    font-family: 'Dr Sugiyama', cursive;
+    margin-bottom: 20px;
+}
+
+// Contact
+main#contact {
+    min-height: calc(100vh - 55px);
+    text-align: center;
+}
+
+aside {
+    text-align: center;
 }
 
 #contact-img {
     @include contact;
 }
 
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+ 
+     div {
+         font-size: 1.5rem;
+         padding: 1.5rem 2.5rem;
+         margin-bottom: 1rem;
+         box-shadow: $box-shadow;
+         background: rgba(lighten($primary-color, 2), 1);
+         border-radius: 10px;
+         text-align: center;
+         @include easeOut;
+ 
+         &:hover {
+             background: $secondary-color;
+             color: set-text-color($secondary-color);
+             span {
+                 color: set-text-color($secondary-color);
+             }
+         }
+     }
+ }
 
-
+// Footer
 #main-footer {
     text-align: center;
     padding: 1rem;
