@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #000;
+    background: #302f2f;
     transition: all 0.6s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -73,7 +73,7 @@
     font-size: 30px;
     padding: 1rem 0;
     font-weight: 600;
-    color: #000;
+    color: #302f2f;
     text-decoration: none;
     transition: all 0.6s ease-out; }
     .menu .nav-link:hover {
@@ -99,10 +99,10 @@
 
 body {
   background: #d4d4d4;
-  color: #000;
+  color: #302f2f;
   height: 100%;
   margin: 0;
-  font-family: 'Roboto', sans-serif, Tahoma, Geneva, Impact, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url("../images/homeimage.jpg");
@@ -164,7 +164,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 15px;
-  grid-template-areas: 'bioimage bioimage' 'bio bio' 'job1 descjob1' 'job2 descjob2' 'job3 descjob3';
+  grid-template-areas: 'bioimage bioimage' 'bio bio' 'skill skill' 'job1 descjob1' 'job2 descjob2' 'job3 descjob3';
   grid-template-columns: 1fr 1fr; }
 
 .bio-image {
@@ -178,31 +178,58 @@ main {
 
 .bio {
   grid-area: bio;
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  height: 450px;
+  font-size: 1.2rem;
+  padding: 3rem 6rem;
+  height: 600px;
   border-radius: 5px;
-  background: #e1e1e1; }
+  background: linear-gradient(to top left, #e3e1e4, #a79da4);
+  overflow: auto; }
+  .bio h3 {
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 2rem; }
+
+.skill {
+  grid-area: skill;
+  font-size: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 6rem;
+  background: linear-gradient(to bottom right, #e3e1e4, #a79da4); }
+  .skill h3 {
+    width: 100%;
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 2rem; }
+
+.skill > p {
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  background: #7b777c;
+  color: white;
+  overflow: auto; }
 
 .job-1 {
   grid-area: job1;
   height: 300px;
-  border-right: #6c208f 5px solid; }
+  border-right: black 5px solid;
+  background: url("images/breakline.png"); }
 
 .desc-job1 {
   grid-area: descjob1;
   height: 300px;
-  border-left: #6c208f 5px solid; }
+  border-left: black 5px solid; }
 
 .job-2 {
   grid-area: job2;
   height: 300px;
-  border-right: #0d7ba7 5px solid; }
+  border-right: #1e8ebb 5px solid; }
 
 .desc-job2 {
   grid-area: descjob2;
   height: 300px;
-  border-left: #0d7ba7 5px solid; }
+  border-left: #1e8ebb 5px solid; }
 
 .job-3 {
   grid-area: job3;
@@ -216,13 +243,30 @@ main {
 
 .job {
   background: #e1e1e1;
-  padding: 0.5rem;
   border-radius: 5px; }
+  .job:hover {
+    opacity: 0.6;
+    transition: all 0.6s ease-out; }
+
+.job img {
+  object-fit: fill;
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; }
 
 .desc {
   background: #e1e1e1;
-  padding: 0.5rem;
-  border-radius: 5px; }
+  padding: 1.5rem;
+  border-radius: 5px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: left; }
+  .desc h6 {
+    margin-bottom: 0; }
+  .desc ul li {
+    padding: 0.5rem; }
 
 .projects-container {
   display: grid;
@@ -275,16 +319,23 @@ main {
   width: 100%;
   height: 300px;
   border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px; }
-  .projects-container img:hover {
-    opacity: 0.6;
-    transition: all 0.6s ease-out; }
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .projects-container .desc {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .projects-container .desc h4 {
+    margin: 5px 0;
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 2em; }
+  .projects-container .desc li {
+    padding: 0; }
+  .projects-container .desc h6 {
+    margin: 0;
+    padding: 0; }
   .projects-container .desc .btn-links {
     width: 100%; }
 
@@ -333,7 +384,7 @@ main {
 .overlay {
   position: absolute;
   bottom: 0;
-  background: rgba(248, 240, 248, 0.7);
+  background: rgba(248, 240, 248, 0.8);
   color: black;
   width: 100%;
   height: 100%;
@@ -343,7 +394,8 @@ main {
   padding: 20px;
   text-align: center;
   border-radius: 8px;
-  border: #6c208f 3px solid; }
+  border: #6c208f 3px solid;
+  overflow: auto; }
 
 .passion-img-container:hover .overlay {
   opacity: 1; }
@@ -353,7 +405,8 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 65px; }
+  padding: 60px;
+  text-align: left; }
 
 .passion-img-container span {
   font-size: 3rem;
@@ -407,8 +460,16 @@ aside {
   text-align: center;
   padding: 1rem;
   background: #a1a1a1;
-  color: #000;
-  height: 65px; }
+  color: #302f2f;
+  height: 65px;
+  font-family: 'Dr Sugiyama', cursive;
+  font-size: 1.5rem; }
+  #main-footer .fa-heart {
+    font-size: 1rem; }
+
+@media screen and (min-width: 1171px) {
+  .job img {
+    object-fit: cover; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -438,10 +499,14 @@ aside {
       background-size: 100%;
       background-repeat: no-repeat; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'descjob1' 'job2' 'descjob2' 'job3' 'descjob3';
+    grid-template-areas: 'bioimage' 'bio' 'skill' 'job1' 'descjob1' 'job2' 'descjob2' 'job3' 'descjob3';
     grid-template-columns: 1fr; }
   .bio {
     overflow: auto; }
+  .skill {
+    flex-direction: column; }
+  .job img {
+    object-fit: fill; }
   .projects-container {
     grid-template-areas: 'project1' 'descproject1' 'project2' 'descproject2' 'project3' 'descproject3' 'project4' 'descproject4';
     grid-template-columns: 1fr; }

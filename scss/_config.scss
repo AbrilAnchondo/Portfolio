@@ -1,8 +1,5 @@
 
-//$primary-color: rgb(227, 227, 230);
 $primary-color: rgb(212, 212, 212);
-//$primary-color: rgb(243, 242, 243);
-//$secondary-color: rgb(100, 11, 141);
 $secondary-color: rgb(108, 32, 143);
 $show-home-image: true;
 $home-image: url('../images/homeimage.jpg');
@@ -64,7 +61,7 @@ $box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 //function to set text color 
 @function set-text-color($color) {
     @if(lightness($color) > 40) {
-        @return #000;
+        @return rgb(48, 47, 47);
     } @else {
         @return #fff;
     }

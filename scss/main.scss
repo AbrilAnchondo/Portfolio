@@ -11,8 +11,8 @@ body {
     color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
-    //font-family: 'Verdana', sans-serif, Tahoma, Geneva, Impact, sans-serif;
-    font-family: 'Roboto', sans-serif, Tahoma, Geneva, Impact, sans-serif;
+    // font-family: 'Roboto', sans-serif, Tahoma, Geneva, Impact, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.5;
 }
 
@@ -102,6 +102,7 @@ main {
     grid-template-areas:
     'bioimage bioimage'
     'bio bio'
+    'skill skill'
     'job1 descjob1'
     'job2 descjob2'
     'job3 descjob3';
@@ -122,36 +123,69 @@ main {
 
 .bio {
     grid-area: bio;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    //height: 300px;
-    height: 450px;
+    font-size: 1.2rem;
+    padding: 3rem 6rem;
+    // height: 450px;
+    height: 600px;
     border-radius: 5px;;
-    background: lighten($primary-color, 5);
+    background: linear-gradient(to top left, #e3e1e4 ,#a79da4);
+    overflow: auto;
+    
+    h3 {
+        font-family: 'Dr Sugiyama', cursive;
+        font-size: 2rem;
+    }
+}
+
+.skill {
+    grid-area: skill;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 6rem;
+    background: linear-gradient(to bottom right, #e3e1e4 ,#a79da4);
+
+    h3{
+        width: 100%;
+        font-family: 'Dr Sugiyama', cursive;
+        font-size: 2rem;
+    }
+}
+
+.skill > p {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background: rgb(123, 119, 124);
+    color: white;
+    overflow: auto;
 }
 
 .job-1 {
     grid-area: job1;
     height: 300px;
-    border-right: $secondary-color 5px solid;
+    border-right: black 5px solid;
+    background: url("images/breakline.png");
 }
 
 .desc-job1 {
     grid-area: descjob1;
     height: 300px;
-    border-left: $secondary-color 5px solid;
+    border-left: black 5px solid;
 }
 
 .job-2 {
     grid-area: job2;
     height: 300px;
-    border-right: rgb(13, 123, 167) 5px solid;
+    border-right: rgb(30, 142, 187) 5px solid;
 }
 
 .desc-job2 {
     grid-area: descjob2;
     height: 300px;
-    border-left: rgb(13, 123, 167) 5px solid;
+    border-left: rgb(30, 142, 187) 5px solid;
 }
 
 .job-3 {
@@ -168,15 +202,39 @@ main {
 
 .job {
     background: lighten($primary-color, 5);
-    padding: 0.5rem;
     border-radius: 5px;
+
+    &:hover {
+        opacity: 0.6;
+        @include easeOut;
+    }
+}
+
+.job img {
+    object-fit: fill;
+    width: 100%;
+    height: 300px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .desc {
     //border-right: $secondary-color 5px solid;
     background: lighten($primary-color, 5);
-    padding: 0.5rem;
+    padding: 1.5rem;
     border-radius: 5px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    h6 {
+        margin-bottom: 0;
+    }
+    
+    ul li {
+        padding: 0.5rem;
+    }
 }
 
 // My Work & Projects
@@ -245,19 +303,29 @@ main {
     height: 300px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    //box-shadow: $box-shadow;
-
-        &:hover {
-            opacity: 0.6;
-            @include easeOut;
-        }
+    box-shadow: $box-shadow;
 }
 
 .projects-container .desc {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+   h4 {
+       margin: 5px 0;
+       font-family: 'Dr Sugiyama', cursive;
+       font-size: 2em;
+   }
+
+   li {
+    padding: 0;
+   }
+
+    h6 {
+        margin: 0;
+        padding: 0;
+    }
 
     .btn-links {
         width: 100%;
@@ -323,7 +391,7 @@ border-radius: 8px;
 .overlay {
     position: absolute;
     bottom: 0;
-    background: rgba(248, 240, 248, 0.7);
+    background: rgba(248, 240, 248, 0.8);
     color: black;
     width: 100%;
     height: 100%;
@@ -334,6 +402,7 @@ border-radius: 8px;
     text-align: center;
     border-radius: 8px;
     border: $secondary-color 3px solid;
+    overflow: auto;
 }
 
 
@@ -346,8 +415,10 @@ border-radius: 8px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 65px;
+    padding: 60px;
+    text-align: left;
 }
+
 .passion-img-container span {
     font-size: 3rem;
     color: $secondary-color;
@@ -403,6 +474,12 @@ aside {
     background: darken($primary-color, 20);
     color: set-text-color($primary-color);
     height: 65px;
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 1.5rem;
+
+    .fa-heart {
+        font-size: 1rem;
+    }
 }
 
 //media queries should run after the initial css

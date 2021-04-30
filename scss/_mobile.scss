@@ -7,6 +7,9 @@
     // .pass-boxes {
     //     grid-template-columns: repeat(3, 1fr);
     // }
+    .job img {
+        object-fit: cover;
+    }
 }
 
 //desktops & laptops
@@ -69,6 +72,7 @@
         grid-template-areas: 
             'bioimage'
             'bio'
+            'skill'
             'job1'
             'descjob1'
             'job2'
@@ -80,6 +84,14 @@
 
     .bio {
         overflow: auto;
+    }
+
+    .skill {
+        flex-direction: column;
+    }
+
+    .job img {
+        object-fit: fill;
     }
 
     .projects-container {
