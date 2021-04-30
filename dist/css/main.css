@@ -179,6 +179,7 @@ main {
 .bio {
   grid-area: bio;
   font-size: 1.2rem;
+  text-align: left;
   padding: 3rem 6rem;
   height: 600px;
   border-radius: 5px;
@@ -262,11 +263,17 @@ main {
   overflow: auto;
   display: flex;
   flex-direction: column;
-  justify-content: left; }
+  justify-content: space-between;
+  align-items: flex-start; }
+  .desc h3 {
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 2rem; }
   .desc h6 {
-    margin-bottom: 0; }
+    margin: 10px 0; }
+  .desc ul {
+    text-align: left; }
   .desc ul li {
-    padding: 0.5rem; }
+    margin-bottom: 5px; }
 
 .projects-container {
   display: grid;
@@ -316,28 +323,15 @@ main {
 
 .projects-container img {
   object-fit: cover;
+  object-position: 0% 15%;
   width: 100%;
   height: 300px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
-.projects-container .desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start; }
-  .projects-container .desc h4 {
-    margin: 5px 0;
-    font-family: 'Dr Sugiyama', cursive;
-    font-size: 2em; }
-  .projects-container .desc li {
-    padding: 0; }
-  .projects-container .desc h6 {
-    margin: 0;
-    padding: 0; }
-  .projects-container .desc .btn-links {
-    width: 100%; }
+.projects-container .desc .btn-links {
+  width: 100%; }
 
 .project {
   border-radius: 5px;

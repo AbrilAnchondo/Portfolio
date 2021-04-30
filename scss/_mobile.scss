@@ -1,12 +1,5 @@
 //wide screens
 @include mediaExtraLarge {
-    // .projects {
-    //     grid-template-columns: repeat(4, 1fr);
-    // }
-
-    // .pass-boxes {
-    //     grid-template-columns: repeat(3, 1fr);
-    // }
     .job img {
         object-fit: cover;
     }
@@ -14,17 +7,6 @@
 
 //desktops & laptops
 @include mediaLarge {
-    // .projects {
-    //     grid-template-columns: repeat(3, 1fr);
-    // }
-
-    // .projects {
-    //     grid-template-columns: repeat(2, 1fr);
-    // }
-
-    // .pass-boxes {
-    //     grid-template-columns: repeat(2, 1fr);
-    // }
 }
 
 //tablets & small laptops
