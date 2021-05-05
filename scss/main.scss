@@ -441,7 +441,7 @@ main#contact {
         grid-area: email;
     } .message-input {
         grid-area: message;
-        height: 110px;
+        height: 120px;
     }
 
     .text-input {
@@ -468,7 +468,7 @@ main#contact {
 div.my-email, div.my-phone {
     width: 100%;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0.5rem 1rem;
     box-shadow: $box-shadow;
     background: rgba(lighten($primary-color, 2), 1);
@@ -483,6 +483,7 @@ div.my-email, div.my-phone {
             color: set-text-color($secondary-color);
         }
     }
+
 }
 
 #contact-img {
