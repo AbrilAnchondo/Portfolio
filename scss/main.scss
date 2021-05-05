@@ -416,10 +416,10 @@ border-radius: 8px;
 // Contact
 main#contact {
     min-height: calc(100vh - 55px);
-    text-align: center;
+    justify-content: center;
 
     .form-container {
-        margin: 0 210px;
+        margin: 0 20%;
     }
     
     .text-fields {
@@ -450,31 +450,37 @@ main#contact {
 
     button[type='submit'] {
         width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
     }
 }
 
-
 .contact-info {
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    flex-direction: column;
     align-items: center;
+}
 
-    div.my-email, div.my-phone {
-        font-size: 1.2rem;
-        padding: 0.5rem 1rem;
-        box-shadow: $box-shadow;
-        background: rgba(lighten($primary-color, 2), 1);
-        border-radius: 5px;
-        text-align: center;
-        width: 48%;
-        @include easeOut;
+div.my-email, div.my-phone {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    box-shadow: $box-shadow;
+    background: rgba(lighten($primary-color, 2), 1);
+    border-radius: 5px;
+    text-align: center;
+    @include easeOut;
 
-        &:hover {
-            background: $secondary-color;
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        span {
             color: set-text-color($secondary-color);
-            span {
-                color: set-text-color($secondary-color);
-            }
         }
     }
 }

@@ -115,7 +115,7 @@ body {
       right: 0;
       height: 100%;
       width: 100%;
-      background: rgba(212, 212, 212, 0.9);
+      background: rgba(212, 212, 212, 0.7);
       z-index: -1; }
 
 h1, h2, h3 {
@@ -408,9 +408,9 @@ main {
 
 main#contact {
   min-height: calc(100vh - 55px);
-  text-align: center; }
+  justify-content: center; }
   main#contact .form-container {
-    margin: 0 210px; }
+    margin: 0 20%; }
   main#contact .text-fields {
     display: grid;
     grid-template-areas: 'name email' 'subject subject' 'message message';
@@ -428,26 +428,32 @@ main#contact {
   main#contact .text-input {
     padding: 0.5rem 1.5rem; }
   main#contact button[type='submit'] {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 1rem; }
+  main#contact .icons {
+    display: flex;
+    justify-content: center; }
 
 .contact-info {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center; }
-  .contact-info div.my-email, .contact-info div.my-phone {
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background: #d9d9d9;
-    border-radius: 5px;
-    text-align: center;
-    width: 48%;
-    transition: all 0.6s ease-out; }
-    .contact-info div.my-email:hover, .contact-info div.my-phone:hover {
-      background: #6c208f;
+
+div.my-email, div.my-phone {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #d9d9d9;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.6s ease-out; }
+  div.my-email:hover, div.my-phone:hover {
+    background: #6c208f;
+    color: #fff; }
+    div.my-email:hover span, div.my-phone:hover span {
       color: #fff; }
-      .contact-info div.my-email:hover span, .contact-info div.my-phone:hover span {
-        color: #fff; }
 
 #contact-img#contact-img {
   background: url("../images/vintagePhone.jpg");
@@ -460,7 +466,7 @@ main#contact {
     right: 0;
     height: 100%;
     width: 100%;
-    background: rgba(212, 212, 212, 0.9);
+    background: rgba(212, 212, 212, 0.7);
     z-index: -1; }
 
 #main-footer {
@@ -477,6 +483,10 @@ main#contact {
 @media screen and (min-width: 1171px) {
   .job img {
     object-fit: cover; } }
+
+@media screen and (min-width: 769) and (max-width: 1170px) {
+  .contact-info {
+    flex-direction: column; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -519,7 +529,11 @@ main#contact {
     grid-template-columns: 1fr; }
   .flex-grid .gallery-column {
     flex: 100%;
-    max-width: 100%; } }
+    max-width: 100%; }
+  main#contact .text-fields {
+    grid-template-areas: 'name' 'subject' 'email' 'message'; }
+  main#contact .form-container {
+    margin: 0 10%; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {

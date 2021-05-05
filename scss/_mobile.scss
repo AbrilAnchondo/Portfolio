@@ -7,6 +7,9 @@
 
 //desktops & laptops
 @include mediaLarge {
+    .contact-info {
+        flex-direction: column;
+    }
 }
 
 //tablets & small laptops
@@ -93,6 +96,20 @@
     .flex-grid .gallery-column {
         flex: 100%;
         max-width: 100%;
+    }
+
+    main#contact {
+        .text-fields {
+            grid-template-areas: 
+            'name'
+            'subject'
+            'email'
+            'message';
+        }
+
+        .form-container {
+            margin: 0 10%;
+        }
     }
 }
 
