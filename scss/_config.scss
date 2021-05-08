@@ -24,11 +24,11 @@ $box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 //absolute to cover the whole body
                 &:after {
                 content: '';
-                position: absolute;
+                position: fixed;
                 top: 0;
                 right: 0;
-                height: 100%;
                 width: 100%;
+                min-height: 100%;
                 background: rgba($primary-color, $background-opacity);
                 z-index: -1;
             }
@@ -49,7 +49,6 @@ $box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 position: fixed;
                 top: 0;
                 right: 0;
-                height: 100%;
                 width: 100%;
                 min-height: 100%;
                 background: rgba($primary-color, $background-opacity);

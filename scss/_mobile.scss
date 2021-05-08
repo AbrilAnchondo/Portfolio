@@ -117,6 +117,10 @@
 @include mediaSmall {
     main#home h1 {
         margin-top: 10vh;
+
+        &.lg-heading {
+            font-size: 5rem;
+        }        
     }
 
     .flex-grid .gallery-column {
