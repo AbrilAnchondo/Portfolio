@@ -236,7 +236,8 @@ main {
 .job-3 {
   grid-area: job3;
   height: 300px;
-  border-right: #dac106 5px solid; }
+  border-right: #dac106 5px solid;
+  background-color: white; }
 
 .desc-job3 {
   grid-area: descjob3;
@@ -397,7 +398,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 60px;
+  padding: 40px;
   text-align: left; }
 
 .passion-img-container span {
@@ -510,7 +511,7 @@ div.my-email, div.my-phone {
     height: 40vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../images/headshotabri.jpg");
+      background: url("../images/selfie.jpg");
       height: 100%;
       width: 100%;
       background-size: 100%;
@@ -519,7 +520,8 @@ div.my-email, div.my-phone {
     grid-template-areas: 'bioimage' 'bio' 'skill' 'job1' 'descjob1' 'job2' 'descjob2' 'job3' 'descjob3';
     grid-template-columns: 1fr; }
   .bio {
-    overflow: auto; }
+    overflow: auto;
+    padding: 3rem 3rem; }
   .skill {
     flex-direction: column; }
   .job img {
@@ -530,6 +532,8 @@ div.my-email, div.my-phone {
   .flex-grid .gallery-column {
     flex: 100%;
     max-width: 100%; }
+  main#passions .overlay.description {
+    padding: 30px; }
   main#contact .text-fields {
     grid-template-areas: 'name' 'subject' 'email' 'message'; }
   main#contact .form-container {
@@ -538,8 +542,10 @@ div.my-email, div.my-phone {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
-    main#home h1.lg-heading {
-      font-size: 5rem; }
+  main .lg-heading {
+    font-size: 5rem; }
   .flex-grid .gallery-column {
     flex: 100%;
-    max-width: 100%; } }
+    max-width: 100%; }
+  main#about .bio {
+    padding: 3rem 3rem; } }

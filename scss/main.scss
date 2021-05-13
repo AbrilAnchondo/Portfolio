@@ -190,6 +190,7 @@ main {
     grid-area: job3;
     height: 300px;
     border-right: rgb(218, 193, 6) 5px solid;
+    background-color: white;
 }
 
 .desc-job3 {
@@ -402,7 +403,7 @@ border-radius: 8px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 60px;
+    padding: 40px;
     text-align: left;
 }
 
