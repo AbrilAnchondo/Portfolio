@@ -384,7 +384,7 @@ main {
   transition: .5s ease;
   opacity: 0;
   font-size: 1rem;
-  padding: 20px;
+  padding: 50px;
   text-align: center;
   border-radius: 8px;
   border: #6c208f 3px solid;
@@ -398,7 +398,6 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 40px;
   text-align: left; }
 
 .passion-img-container span {
@@ -487,7 +486,9 @@ div.my-email, div.my-phone {
 
 @media screen and (min-width: 769) and (max-width: 1170px) {
   .contact-info {
-    flex-direction: column; } }
+    flex-direction: column; }
+  main#passions .overlay.description {
+    padding: 50px; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -533,7 +534,7 @@ div.my-email, div.my-phone {
     flex: 100%;
     max-width: 100%; }
   main#passions .overlay.description {
-    padding: 30px; }
+    padding: 40px; }
   main#contact .text-fields {
     grid-template-areas: 'name' 'subject' 'email' 'message'; }
   main#contact .form-container {

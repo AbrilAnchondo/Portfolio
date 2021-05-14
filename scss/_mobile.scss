@@ -11,11 +11,11 @@
         flex-direction: column;
     }
 
-    // main#passions {
-    //     .overlay.description {
-    //         padding: 30px;
-    //     }
-    // }
+    main#passions {
+        .overlay.description {
+            padding: 50px;
+        }
+    }
 
 }
 
@@ -108,7 +108,7 @@
 
     main#passions {
         .overlay.description {
-            padding: 30px;
+            padding: 40px;
         }
     }
 
@@ -130,11 +130,7 @@
 //mobile
 @include mediaSmall {
     main#home h1 {
-        margin-top: 10vh;
-
-        // &.lg-heading {
-        //     font-size: 5rem;
-        // }        
+        margin-top: 10vh;     
     }
 
     main .lg-heading {
