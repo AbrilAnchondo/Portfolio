@@ -59,7 +59,7 @@
       Would love to hear from you...
     </h2>
     <div class='form-container'>  
-      <form class='form'>
+      <form class='form' method="POST" data-netlify="true" data-netlify-recaptcha="true">
         <div class="text-fields">
           <input 
             type="text" 
@@ -85,6 +85,7 @@
           placeholder="Message..."
           name="message"
           ></textarea>
+          <div data-netlify-recaptcha="true"></div>
         </div>
         <button 
           class="btn-dark" 
@@ -109,9 +110,6 @@
       </a>
       <a href="https://github.com/AbrilAnchondo" target="_blank">
           <i class="fab fa-github fa-2x"></i>
-      </a>
-      <a href="https://medium.com/@abril79reynaga" target="_blank">
-          <i class="fab fa-medium fa-2x"></i>
       </a>
     </div>
   </main>
