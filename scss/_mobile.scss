@@ -147,4 +147,8 @@
             padding: 3rem 3rem;
         }
     }
+
+    .passion-img-container:focus .overlay {
+        opacity: 1;
+    }
 }

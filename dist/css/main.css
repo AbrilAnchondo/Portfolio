@@ -388,7 +388,8 @@ main {
   text-align: center;
   border-radius: 8px;
   border: #6c208f 3px solid;
-  overflow: auto; }
+  overflow: auto;
+  cursor: pointer; }
 
 .passion-img-container:hover .overlay {
   opacity: 1; }
@@ -549,4 +550,6 @@ div.my-email, div.my-phone {
     flex: 100%;
     max-width: 100%; }
   main#about .bio {
-    padding: 3rem 3rem; } }
+    padding: 3rem 3rem; }
+  .passion-img-container:focus .overlay {
+    opacity: 1; } }

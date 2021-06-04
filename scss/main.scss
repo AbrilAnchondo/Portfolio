@@ -376,6 +376,7 @@ border-radius: 8px;
 .passion-img-container {
     position: relative;
 }
+
 .overlay {
     position: absolute;
     bottom: 0;
@@ -391,6 +392,7 @@ border-radius: 8px;
     border-radius: 8px;
     border: $secondary-color 3px solid;
     overflow: auto;
+    cursor: pointer;
 }
 
 
