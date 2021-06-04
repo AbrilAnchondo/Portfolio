@@ -391,7 +391,7 @@ main {
   overflow: auto;
   cursor: pointer; }
 
-.passion-img-container:hover .overlay {
+.overlay.show {
   opacity: 1; }
 
 .overlay.description {
@@ -550,6 +550,4 @@ div.my-email, div.my-phone {
     flex: 100%;
     max-width: 100%; }
   main#about .bio {
-    padding: 3rem 3rem; }
-  .passion-img-container:active .overlay {
-    opacity: 1; } }
+    padding: 3rem 3rem; } }

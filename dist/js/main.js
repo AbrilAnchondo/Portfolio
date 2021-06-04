@@ -5,6 +5,7 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
+const passionsContainer = document.querySelector('#passions');
 
 //this is to chage the state of the menu
 let showMenu = false;
@@ -31,3 +32,10 @@ function toggleMenu() {
     }
 }
 
+passionsContainer.addEventListener('click', function(e) {
+    console.log(e.target);
+    const overlay = e.target.closest('.overlay');
+    if (overlay) {
+        overlay.classList.toggle('show');
+    }
+})

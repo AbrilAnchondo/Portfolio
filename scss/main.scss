@@ -396,8 +396,12 @@ border-radius: 8px;
 }
 
 
-.passion-img-container:hover .overlay {
-    opacity: 1;
+// .passion-img-container:hover .overlay {
+//     opacity: 1;
+// }
+
+.overlay.show{
+    opacity: 1
 }
 
 .overlay.description {
