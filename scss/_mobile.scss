@@ -1,7 +1,42 @@
 //wide screens
 @include mediaExtraLarge {
+    .menu {
+        .nav-link {
+            font-size: 3.5rem;
+        }
+
+        &-branding {
+            object-fit: cover;
+        }
+    }
+
     .job img {
         object-fit: cover;
+    }
+
+    main#about {
+        .about-info {
+            max-width: 1440px;
+        }
+    }
+
+    main#work {
+        .projects-container {
+            max-width: 1440px;
+            //width: 50%;
+        }
+    }
+
+    main#passions {
+        .gallery-row {
+            max-width: 1440px;
+        }
+    }
+
+    main#contact {
+        .form-container {
+            width: 40%;
+        }
     }
 }
 
@@ -14,6 +49,12 @@
     main#passions {
         .overlay.description {
             padding: 50px;
+        }
+    }
+
+    main#contact {
+        .form-container {
+            width: 40%;
         }
     }
 
