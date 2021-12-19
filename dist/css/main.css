@@ -596,7 +596,8 @@ div.my-phone {
     overflow: auto;
     padding: 3rem 3rem; }
   .skill {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: flex-start; }
   .job img {
     object-fit: fill; }
   .projects-container {
