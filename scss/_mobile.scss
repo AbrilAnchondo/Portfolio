@@ -1,195 +1,200 @@
 //wide screens
 @include mediaExtraLarge {
-    .menu {
-        .nav-link {
-            font-size: 3.5rem;
-        }
-
-        &-branding {
-            object-fit: cover;
-        }
+  .menu {
+    .nav-link {
+      font-size: 3.5rem;
     }
 
-    .job img {
-        object-fit: cover;
+    &-branding {
+      object-fit: cover;
     }
+  }
 
-    main#about {
-        .about-info {
-            max-width: 1440px;
-        }
-    }
+  .job img {
+    object-fit: cover;
+  }
 
-    main#work {
-        .projects-container {
-            max-width: 1440px;
-            //width: 50%;
-        }
+  main#about {
+    .about-info {
+      max-width: 1440px;
     }
+  }
 
-    main#passions {
-        .gallery-row {
-            max-width: 1440px;
-        }
+  main#work {
+    .projects-container {
+      max-width: 1440px;
+      //width: 50%;
     }
+  }
 
-    main#contact {
-        .form-container {
-            width: 40%;
-        }
+  main#passions {
+    .gallery-row {
+      max-width: 1440px;
     }
+  }
+
+  main#contact {
+    .form-container {
+      width: 40%;
+    }
+  }
 }
 
 //desktops & laptops
 @include mediaLarge {
-    .contact-info {
-        flex-direction: column;
-    }
+  .contact-info {
+    flex-direction: column;
+  }
 
-    main#passions {
-        .overlay.description {
-            padding: 50px;
-        }
+  main#passions {
+    .overlay.description {
+      padding: 50px;
     }
+  }
 
-    main#contact {
-        .form-container {
-            width: 40%;
-        }
+  main#contact {
+    .form-container {
+      width: 40%;
     }
-
+  }
 }
 
 //tablets & small laptops
 @include mediaMedium {
-    main {
-        align-items: center;
-        text-align: center;
+  main {
+    align-items: center;
+    text-align: center;
 
-        .lg-heading {
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
     }
+  }
 
-    ul.menu-nav, div.menu-branding {
-        float: none;
-        width: 100%;
-        min-height: 0;
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
 
-        &.show {
-            transform: translate3d(0,0,0);
-            border-bottom: 1mm ridge $secondary-color;
-        }
+    &.show {
+      transform: translate3d(0, 0, 0);
+      border-bottom: 1mm ridge $secondary-color;
     }
+  }
 
-    .menu-nav {
-        height: 60vh;
-        transform: translate3d(-100%, 0, 0);
-        font-size: 24px;
+  .menu-nav {
+    height: 60vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 40vh;
+    transform: translate3d(100%, 0, 0);
+    .portrait {
+      background: url("../images/portrait2.jpeg");
+      height: 100%;
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
     }
+  }
 
-    .menu-branding {
-        height: 40vh;
-        transform: translate3d(100%,0,0);
-        .portrait {
-            background: url('../images/portrait2.jpeg');
-            height: 100%;
-            width: 100%;
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-    }
-
+  main#about {
     .about-info {
-        grid-template-areas: 
-            'bioimage'
-            'bio'
-            'skill'
-            'job1'
-            'descjob1'
-            'job2'
-            'descjob2'
-            'job3'
-            'descjob3';
-        grid-template-columns: 1fr;
+      grid-template-areas:
+        "bioimage"
+        "bio"
+        "skill"
+        "job1"
+        "descjob1"
+        "job2"
+        "descjob2"
+        "job3"
+        "descjob3";
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+  }
+
+  .bio {
+    overflow: auto;
+    padding: 3rem 3rem;
+  }
+
+  .skill {
+    flex-direction: column;
+  }
+
+  .job img {
+    object-fit: fill;
+  }
+
+  .projects-container {
+    grid-template-areas:
+      "project1"
+      "descproject1"
+      "project2"
+      "descproject2"
+      "project3"
+      "descproject3"
+      "project4"
+      "descproject4"
+      "project5"
+      "descproject5";
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .flex-grid .gallery-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  main#passions {
+    .overlay.description {
+      padding: 40px;
+    }
+  }
+
+  main#contact {
+    .text-fields {
+      grid-template-areas:
+        "name"
+        "subject"
+        "email"
+        "message";
     }
 
-    .bio {
-        overflow: auto;
-        padding: 3rem 3rem;
+    .form-container {
+      margin: 0 10%;
     }
-
-    .skill {
-        flex-direction: column;
-    }
-
-    .job img {
-        object-fit: fill;
-    }
-
-    .projects-container {
-        grid-template-areas:
-        'project1'
-        'descproject1'
-        'project2'
-        'descproject2'
-        'project3'
-        'descproject3'
-        'project4'
-        'descproject4'
-        ;
-        grid-template-columns: 1fr;
-    }
-
-    .flex-grid .gallery-column {
-        flex: 100%;
-        max-width: 100%;
-    }
-
-    main#passions {
-        .overlay.description {
-            padding: 40px;
-        }
-    }
-
-    main#contact {
-        .text-fields {
-            grid-template-areas: 
-            'name'
-            'subject'
-            'email'
-            'message';
-        }
-
-        .form-container {
-            margin: 0 10%;
-        }
-    }
+  }
 }
 
 //mobile
 @include mediaSmall {
-    main#home h1 {
-        margin-top: 10vh;     
-    }
+  main#home h1 {
+    margin-top: 10vh;
+  }
 
-    main .lg-heading {
-        font-size: 5rem;
-    }
+  main .lg-heading {
+    font-size: 5rem;
+  }
 
-    .flex-grid .gallery-column {
-        flex: 100%;
-        max-width: 100%;
-    }
+  .flex-grid .gallery-column {
+    flex: 100%;
+    max-width: 100%;
+  }
 
-    main#about {
-        .bio {
-            padding: 3rem 3rem;
-        }
+  main#about {
+    .bio {
+      padding: 3rem 3rem;
     }
+  }
 
-    // .passion-img-container:active .overlay {
-    //     opacity: 1;
-    // }
+  // .passion-img-container:active .overlay {
+  //     opacity: 1;
+  // }
 }

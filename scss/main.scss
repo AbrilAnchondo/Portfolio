@@ -1,553 +1,583 @@
-@import 'config';
-@import 'menu';
+@import "config";
+@import "menu";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    @include background;
-    background: $primary-color;
-    color: set-text-color($primary-color);
-    height: 100%;
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    line-height: 1.5;
+  @include background;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 }
 
 //heading
-h1, h2, h3 {
-    margin: 0;
-    font-weight: 400;
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
 
-    //this refers to a class of lg-heading attached not nested within it, to h1,h1 or h3 and not a class lg-heading nested within, so I need an & meaning an h1 with its own class lg heading
-    //rem is a multiplier of the font size (1rem is 16px)
-    //rgb to see through
-    &.lg-heading {
-        font-size: 6rem;
-    }
+  //this refers to a class of lg-heading attached not nested within it, to h1,h1 or h3 and not a class lg-heading nested within, so I need an & meaning an h1 with its own class lg heading
+  //rem is a multiplier of the font size (1rem is 16px)
+  //rgb to see through
+  &.lg-heading {
+    font-size: 6rem;
+  }
 
-    &.sm-heading {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
-    }
-
+  &.sm-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 //the bigger z index the closer it appears
 header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 .text-secondary {
-    color: $secondary-color;
+  color: $secondary-color;
 }
 
 //to make a sticky footer have to adjust height
 //element before: calculate vh - height of footer
 main {
-    padding: 4rem;
-    padding-bottom: 2rem;
-    //height: 100%;
-    //this calc is in main which is the element above the footer, this is to make the footer stick at the bottom
-    min-height: calc(100vh - 55px);
+  padding: 4rem;
+  padding-bottom: 2rem;
+  //height: 100%;
+  //this calc is in main which is the element above the footer, this is to make the footer stick at the bottom
+  min-height: calc(100vh - 55px);
 
-    //targets class of icons inside main
-    //transition, first parameter is what you want to transition (ex color), time it takes, and effect
-    //includes add the mixing easOut defined at the top 
-    .icons {
-        margin-top: 1rem;
+  //targets class of icons inside main
+  //transition, first parameter is what you want to transition (ex color), time it takes, and effect
+  //includes add the mixing easOut defined at the top
+  .icons {
+    margin-top: 1rem;
 
-        a {
-            padding: 0.5rem;
-            color: white;
-            &:hover {
-                color: $secondary-color;
-                @include easeOut();
-            }
-        }
+    a {
+      padding: 0.5rem;
+      color: white;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
     }
+  }
 
-    //any main with the id home
-    &#home {
-        //overflow will eliminate any scroll bars
-        overflow: hidden;
-        h1 {
-            margin-top: 25vh;
-        }
-        
+  //any main with the id home
+  &#home {
+    //overflow will eliminate any scroll bars
+    overflow: hidden;
+    h1 {
+      margin-top: 25vh;
     }
+  }
 
-    .title {
-        font-family: 'Dr Sugiyama', cursive;
-        font-size: 8em;
-        font-weight: 150;
-    }
+  .title {
+    font-family: "Dr Sugiyama", cursive;
+    font-size: 8em;
+    font-weight: 150;
+  }
 }
 
 main#about {
-    .about-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    } 
-    
-    .about-info {
-        display: grid;
-        grid-gap: 15px;
-        grid-template-areas:
-        'bioimage bioimage'
-        'bio bio'
-        'skill skill'
-        'job1 descjob1'
-        'job2 descjob2'
-        'job3 descjob3';
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-//creating grid areas
-.bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    //height: 300px;
-    height: 450px;
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: $box-shadow;
-    object-fit: cover;
-}
-
-.bio {
-    grid-area: bio;
-    font-size: 1.2rem;
-    text-align: left;
-    padding: 3rem 6rem;
-    height: 600px;
-    border-radius: 5px;;
-    background: linear-gradient(to top left, #e3e1e4 ,#a79da4);
-    overflow: auto;
-    
-    h3 {
-        font-family: 'Dr Sugiyama', cursive;
-        font-size: 2rem;
-    }
-}
-
-.skill {
-    grid-area: skill;
-    font-size: 1rem;
-    border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 6rem;
-    background: linear-gradient(to bottom right, #e3e1e4 ,#a79da4);
-
-    h3{
-        width: 100%;
-        font-family: 'Dr Sugiyama', cursive;
-        font-size: 2rem;
-    }
-}
-
-.skill > p {
-    padding: .5rem 1rem;
-    border-radius: 5px;
-    background: rgb(123, 119, 124);
-    color: white;
-    overflow: auto;
-}
-
-.job-1 {
-    grid-area: job1;
-    height: 300px;
-    border-right: black 5px solid;
-    background: url("images/breakline.png");
-}
-
-.desc-job1 {
-    grid-area: descjob1;
-    height: 300px;
-    border-left: black 5px solid;
-}
-
-.job-2 {
-    grid-area: job2;
-    height: 300px;
-    border-right: rgb(30, 142, 187) 5px solid;
-}
-
-.desc-job2 {
-    grid-area: descjob2;
-    height: 300px;
-    border-left: rgb(30, 142, 187) 5px solid;
-}
-
-.job-3 {
-    grid-area: job3;
-    height: 300px;
-    border-right: rgb(218, 193, 6) 5px solid;
-    background-color: white;
-}
-
-.desc-job3 {
-    grid-area: descjob3;
-    height: 300px;
-    border-left: rgb(218, 193, 6) 5px solid;
-}
-
-.job {
-    background: lighten($primary-color, 5);
-    border-radius: 5px;
-
-    &:hover {
-        opacity: 0.6;
-        @include easeOut;
-    }
-}
-
-.job img {
-    object-fit: fill;
-    width: 100%;
-    height: 300px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.desc {
-    background: lighten($primary-color, 5);
-    padding: 1.5rem;
-    border-radius: 5px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-
-// check this style
-    // h3 {
-    //     font-family: 'Dr Sugiyama', cursive;
-    //     font-size: 2rem;
-    // }
-
-    h6 {
-        margin: 10px 0;
-    }
-
-    ul {
-        text-align: left;
-    }
-
-    ul li {
-        margin-bottom: 5px;
-    }
-}
-
-// My Work & Projects
-.projects-wrapper {
+  .about-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-} 
+  }
+
+  .about-info {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas:
+      "bioimage bioimage"
+      "bio bio"
+      "skill skill"
+      "job1 descjob1"
+      "job2 descjob2"
+      "job3 descjob3";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+//creating grid areas
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  //height: 300px;
+  height: 450px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+  object-fit: cover;
+}
+
+.bio {
+  grid-area: bio;
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 3rem 6rem;
+  height: 600px;
+  border-radius: 5px;
+  background: linear-gradient(to top left, #e3e1e4, #a79da4);
+  overflow: auto;
+
+  h3 {
+    font-family: "Dr Sugiyama", cursive;
+    font-size: 2rem;
+  }
+}
+
+.skill {
+  grid-area: skill;
+  font-size: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 6rem;
+  background: linear-gradient(to bottom right, #e3e1e4, #a79da4);
+
+  h3 {
+    width: 100%;
+    font-family: "Dr Sugiyama", cursive;
+    font-size: 2rem;
+  }
+}
+
+.skill > p {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background: rgb(123, 119, 124);
+  color: white;
+  overflow: auto;
+}
+
+.job1 {
+  grid-area: job1;
+  height: 300px;
+  border-right: black 5px solid;
+  background: url("images/breakline.png");
+}
+
+.desc-job1 {
+  grid-area: descjob1;
+  height: 300px;
+  border-left: black 5px solid;
+}
+
+.job2 {
+  grid-area: job2;
+  height: 300px;
+  border-right: rgb(30, 142, 187) 5px solid;
+}
+
+.desc-job2 {
+  grid-area: descjob2;
+  height: 300px;
+  border-left: rgb(30, 142, 187) 5px solid;
+}
+
+.job3 {
+  grid-area: job3;
+  height: 300px;
+  border-right: rgb(218, 193, 6) 5px solid;
+  background-color: white;
+}
+
+.desc-job3 {
+  grid-area: descjob3;
+  height: 300px;
+  border-left: rgb(218, 193, 6) 5px solid;
+}
+
+.job {
+  background: lighten($primary-color, 5);
+  border-radius: 5px;
+
+  &:hover {
+    opacity: 0.6;
+    @include easeOut;
+  }
+}
+
+.job img {
+  object-fit: fill;
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.desc {
+  background: lighten($primary-color, 5);
+  padding: 1.5rem;
+  border-radius: 5px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  //check this style
+  //   h3 {
+  //     font-family: "Dr Sugiyama", cursive;
+  //     font-size: 2rem;
+  //   }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  h4 {
+    margin: 8px 0;
+  }
+
+  h6 {
+    margin: 10px 0;
+  }
+
+  ul {
+    text-align: left;
+  }
+
+  ul li {
+    margin-bottom: 3px;
+  }
+}
+
+// My Work & Projects
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
 .projects-container {
-    display: grid;
-    grid-template-areas: 
-    'project1 descproject1'
-    'project2 descproject2'
-    'project3 descproject3'
-    'project4 descproject4';
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 15px;
+  display: grid;
+  grid-template-areas:
+    "project1 descproject1"
+    "project2 descproject2"
+    "project3 descproject3"
+    "project4 descproject4"
+    "project5 descproject5";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.desc {
+  .project-detail p {
+    margin: 10px 0px;
+  }
 }
 
 .project1 {
-    grid-area: project1;
-    height: 300px;
-    border-right: $secondary-color 5px solid;
+  grid-area: project1;
+  height: 300px;
+  border-right: rgb(218, 193, 6) 5px solid;
 }
 
 .desc-project1 {
-    grid-area: descproject1;
-    height: 300px;
-    border-left: $secondary-color 5px solid;
+  grid-area: descproject1;
+  height: 300px;
+  border-left: rgb(218, 193, 6) 5px solid;
 }
 
 .project2 {
-    grid-area: project2;
-    height: 300px;
-    border-right: rgb(167, 20, 154) 5px solid;
+  grid-area: project2;
+  height: 300px;
+  border-right: $secondary-color 5px solid;
 }
 
 .desc-project2 {
-    grid-area: descproject2;
-    height: 300px;
-    border-left: rgb(167, 20, 154) 5px solid;
+  grid-area: descproject2;
+  height: 300px;
+  border-left: $secondary-color 5px solid;
 }
 
 .project3 {
-    grid-area: project3;
-    height: 300px;
-    border-right: rgb(218, 193, 6) 5px solid;
+  grid-area: project3;
+  height: 300px;
+  //border-right: rgb(218, 193, 6) 5px solid;
+  border-right: rgb(167, 20, 154) 5px solid;
 }
 
 .desc-project3 {
-    grid-area: descproject3;
-    height: 300px;
-    border-left: rgb(218, 193, 6) 5px solid;
+  grid-area: descproject3;
+  height: 300px;
+  //border-left: rgb(218, 193, 6) 5px solid;
+  border-left: rgb(167, 20, 154) 5px solid;
 }
 
 .project4 {
-    grid-area: project4;
-    height: 300px;
-    border-right: rgb(58, 146, 17) 5px solid;
+  grid-area: project4;
+  height: 300px;
+  border-right: rgb(226, 85, 121) 5px solid;
 }
 
 .desc-project4 {
-    grid-area: descproject4;
-    height: 300px;
-    border-left: rgb(58, 146, 17) 5px solid;
+  grid-area: descproject4;
+  height: 300px;
+  border-left: rgb(226, 85, 121) 5px solid;
+}
+
+.project5 {
+  grid-area: project5;
+  height: 300px;
+  border-right: rgb(58, 146, 17) 5px solid;
+}
+
+.desc-project5 {
+  grid-area: descproject5;
+  height: 300px;
+  border-left: rgb(58, 146, 17) 5px solid;
 }
 
 .projects-container img {
-    object-fit: cover;
-    object-position: 0% 8%;
-    width: 100%;
-    height: 300px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    box-shadow: $box-shadow;
+  object-fit: cover;
+  object-position: 0% 8%;
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: $box-shadow;
 }
 
 .projects-container .desc {
-    .btn-links {
-        width: 100%;
-    }
+  .btn-links {
+    width: 100%;
+  }
 }
 .project {
-    border-radius: 5px;
-    box-shadow: $box-shadow;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
 }
 
 .btn {
-    display: block;
-    padding: 0.5rem 1rem;
-    border: 0;
-    margin-bottom: 0.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.1rem;
+  border-radius: 5px;
 
-    &:hover {
-        opacity: 0.8;
-        color: $secondary-color;
-    }
+  &:hover {
+    opacity: 0.8;
+    color: $secondary-color;
+  }
 }
 
 .btn-light {
-    @extend .btn;
-    background: lighten($primary-color, 10);
-    color: black;
-    margin-top: 0.1rem;
+  @extend .btn;
+  background: lighten($primary-color, 10);
+  color: black;
+  margin-top: 0.1rem;
 }
 
 .btn-dark {
-    @extend .btn;
-    background: darken($primary-color, 100);
-    color: white;
+  @extend .btn;
+  background: darken($primary-color, 65);
+  color: white;
 }
 
 // Other interests - flex grid
 main#passions {
-    .passions-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    } 
+  .passions-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .flex-grid .gallery-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-basis: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 0;
 }
 
 .flex-grid .gallery-column {
-    flex: 33%;
-    max-width: 35%;
+  flex: 33%;
+  max-width: 35%;
 }
 
 .flex-grid img {
-width: 100%;
-height: 600px;
-object-fit: cover;
-padding: 3px;
-border-radius: 8px;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  padding: 3px;
+  border-radius: 8px;
 }
 
- // img overlay
+// img overlay
 .passion-img-container {
-    position: relative;
+  position: relative;
 }
 
 .overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(248, 240, 248, 0.8);
-    color: black;
-    width: 100%;
-    height: 100%;
-    transition: .5s ease;
-    opacity:0;
-    font-size: 1rem;
-    padding: 50px;
-    text-align: center;
-    border-radius: 8px;
-    border: $secondary-color 3px solid;
-    overflow: auto;
-    cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  background: rgba(248, 240, 248, 0.8);
+  color: black;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  font-size: 1rem;
+  padding: 50px;
+  text-align: center;
+  border-radius: 8px;
+  border: $secondary-color 3px solid;
+  overflow: auto;
+  cursor: pointer;
 }
-
 
 // .passion-img-container:hover .overlay {
 //     opacity: 1;
 // }
 
-.overlay.show{
-    opacity: 1
+.overlay.show {
+  opacity: 1;
 }
 
 .overlay.description {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
 }
 
 .passion-img-container span {
-    font-size: 3rem;
-    color: $secondary-color;
-    font-family: 'Dr Sugiyama', cursive;
-    margin-bottom: 20px;
+  font-size: 3rem;
+  color: $secondary-color;
+  font-family: "Dr Sugiyama", cursive;
+  margin-bottom: 20px;
 }
 
 // Contact
 main#contact {
-    min-height: calc(100vh - 55px);
+  min-height: calc(100vh - 55px);
+  justify-content: center;
+
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    width: 100%;
+  }
 
-    .contact-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
+  .form-container {
+    width: 75%;
+  }
 
-    .form-container {
-        width: 75%;
-    }
-    
-    .text-fields {
-        display: grid;
-        grid-template-areas:
-        'name email'
-        'subject subject'
-        'message message';
-        grid-gap: 0.7rem;
-        margin-bottom: 1rem;  
-    }
+  .text-fields {
+    display: grid;
+    grid-template-areas:
+      "name email"
+      "subject subject"
+      "message message";
+    grid-gap: 0.7rem;
+    margin-bottom: 1rem;
+  }
 
-    .name-input {
-        grid-area: name;
-    }
-    .subject-input {
-        grid-area: subject;
-    } .email-input {
-        grid-area: email;
-    } .message-input {
-        grid-area: message;
-        height: 120px;
-    }
+  .name-input {
+    grid-area: name;
+  }
+  .subject-input {
+    grid-area: subject;
+  }
+  .email-input {
+    grid-area: email;
+  }
+  .message-input {
+    grid-area: message;
+    height: 120px;
+  }
 
-    .text-input {
-        padding: 0.5rem 1.5rem;
-    }
+  .text-input {
+    padding: 0.5rem 1.5rem;
+  }
 
-    button[type='submit'] {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
+  button[type="submit"] {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 
-    .icons {
-        display: flex;
-        justify-content: center;
-    }
+  .icons {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .contact-info {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-div.my-email, div.my-phone {
-    width: 100%;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    box-shadow: $box-shadow;
-    background: rgba(lighten($primary-color, 2), 1);
-    border-radius: 5px;
-    text-align: center;
-    @include easeOut;
+div.my-email,
+div.my-phone {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: $box-shadow;
+  background: rgba(lighten($primary-color, 2), 1);
+  border-radius: 5px;
+  text-align: center;
+  @include easeOut;
 
-    &:hover {
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
-        span {
-            color: set-text-color($secondary-color);
-        }
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    span {
+      color: set-text-color($secondary-color);
     }
-
+  }
 }
 
 #contact-img {
-    @include contact;
+  @include contact;
 }
 
 // Footer
 #main-footer {
-    text-align: center;
-    padding: 1rem;
-    background: darken($primary-color, 20);
-    color: set-text-color($primary-color);
-    height: 65px;
-    font-family: 'Dr Sugiyama', cursive;
-    font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 20);
+  color: set-text-color($primary-color);
+  height: 65px;
+  font-family: "Dr Sugiyama", cursive;
+  font-size: 1.5rem;
 
-    .fa-heart {
-        font-size: 1rem;
-    }
+  .fa-heart {
+    font-size: 1rem;
+  }
 }
 
 //media queries should run after the initial css
-@import 'mobile';
-
+@import "mobile";

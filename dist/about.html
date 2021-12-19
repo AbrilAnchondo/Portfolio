@@ -1,137 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=block" rel="stylesheet" rel="preload" as="style">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=block"
+      rel="stylesheet"
+      rel="preload"
+      as="style"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>About</title>
     <script defer src="js/main.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
         </div>
-       <nav class="menu">
-           <div class="menu-branding">
-            <div class="portrait"></div>
-           </div>
-           <ul class="menu-nav">
-            <li class="nav-item" >
-                <a href="index.html" class="nav-link">
-                    Home
-                </a>
-            </li>
-            <li class="nav-item current">
-                <a href="about.html" class="nav-link">
-                    About Me
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="work.html" class="nav-link">
-                    My Work
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="passions.html" class="nav-link">
-                    Other Interests
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="contact.html" class="nav-link">
-                    Contact
-                </a>
-            </li>
-           </ul>
-
-       </nav>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link"> Home </a>
+          </li>
+          <li class="nav-item current">
+            <a href="about.html" class="nav-link"> About Me </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> My Work </a>
+          </li>
+          <li class="nav-item">
+            <a href="passions.html" class="nav-link"> Other Interests </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> Contact </a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main id="about">
-        <h1 class="lg-heading title">
-            About
-             <span class="text-secondary">Me</span>
-        </h1>
-        <h2 class="sm-heading">
-          my journey & experience...
-        </h2>
-        <div class='about-wrapper'>
-            <div class="about-info">
-                <img  src="images/work.jpeg" alt="Abril Anchondo" class="bio-image">
-                <div class="bio">
-                    <h3 class="text-secondary">
-                        BIO
-                    </h3>
-                    <p>I am a new developer and a former professional dancer. As I was wrapping up my dance career, I developed a great interest in the intersection of technology and sustainability. I took action by devoting time to online courses, and that is how I discovered my passion for code, which led me to enroll in the full-stack software engineer immersive at The Flatiron School. An essential component of my transition into tech is to find a company that is a leader in its industry and also aligns with my values, providing an opportunity to make a real difference with code. </p>
-                    <p>I am excited about great ideas that bring together groups of people to work on innovative solutions.</p>
-                    <p>My artistic background has given me the opportunity to travel, work with people from different backgrounds and develop a deep commitment to focusing and learning fast.</p>
-                    <p>I have great enthusiasm and self-motivation to learn new things to add to my skill set, one of the things I enjoy the most.</p>
-                    <p>I'm a native Spanish speaker, English is my second language, and I am also fluent in Italian.</p>
-                </div>
-                <div class="skill">
-                    <h3 class="text-secondary">
-                        SKILLS
-                    </h3>
-                    <p>HTML</p>
-                    <p>CSS / SASS</p> 
-                    <p>Javascript</p>
-                    <p>React.js</p>
-                    <p>Ruby on Rails</p>
-                    <p>Node.js familiarity</p>
-                </div>
-                <div class="job job-1">
-                    <a href="https://www.breaklinedigital.com/" target="_blank">
-                        <img src="images/breakline.png" alt="breakline">
-                    </a>
-                </div>
-                <div class="desc desc-job1">
-                    <h3>Breakline Digital</h3>
-                    <h6>Javscript Consultant</h6>
-                    <ul>
-                        <li> Refactored javascript widgets utilized by Discover Bank / AAA landing pages to enable dynamic JSON-based configuration.
-                        </li>
-                        <li>Modernized existing codebase to incorporate async / await fetching of bank product rates.</li>
-                    </ul>
-                </div>
-                <div class="job job-2">
-                    <a href="https://flatironschool.com/" target="_blank">
-                        <img src="images/flatiron.png" alt="flatiron">
-                    </a> 
-                </div>
-                <div class="desc desc-job2">
-                    <h3>Flatiron School</h3>
-                    <h6>Student</h6>
-                    <ul>
-                        <li>Immersive Full stack software engineering program.</li>
-                        <li>This has been a major decision decision in my life, gateway to transition into a new career.</li>
-                        <li>Over 500 hours of on campus learning.</li>
-                        <li>The curriculum includes: Ruby on Rails, Javascript and React.</li>
-                        <li>The program's most valuable gift is teaching how to learn, problem solving and interacting with people that share similar interests.</li>
-                    </ul>
-                </div>
-                <div class="job job-3">
-                    <a href="https://calpullidance.org/" target="_blank">
-                        <img src="images/Calpulli.JPG" alt="Calpulli Mexican Dance Company">
-                    </a> 
-                </div>
-                <div class="desc desc-job3">
-                    <h3>Calpulli Mexican Dance Company</h3>
-                    <h6>Principal Dancer</h6>
-                    <ul>
-                        <li>Joined the company to participate in two of their ballet-folklore fusion productions, Boda Mexicana, and Día de los Muertos.</li>
-                        <li>Calpulli has an outstanding community outreach program and share the love for dance and mexican culture.</li>
-                    </ul>
-                </div>
+      <h1 class="lg-heading title">
+        About
+        <span class="text-secondary">Me</span>
+      </h1>
+      <h2 class="sm-heading">my journey & experience...</h2>
+      <div class="about-wrapper">
+        <div class="about-info">
+          <img src="images/work.jpeg" alt="Abril Anchondo" class="bio-image" />
+          <div class="bio">
+            <h3 class="text-secondary">BIO</h3>
+            <p>
+              I am a new developer and a former professional dancer. As I was
+              wrapping up my dance career, I developed a great interest in the
+              intersection of technology and sustainability. I took action by
+              devoting time to online courses, and that is how I discovered my
+              passion for code, which led me to enroll in the full-stack
+              software engineer immersive at The Flatiron School. An essential
+              component of my transition into tech is to find a company that is
+              a leader in its industry and also aligns with my values, providing
+              an opportunity to make a real difference with code.
+            </p>
+            <p>
+              I am excited about great ideas that bring together groups of
+              people to work on innovative solutions.
+            </p>
+            <p>
+              My artistic background has given me the opportunity to travel,
+              work with people from different backgrounds and develop a deep
+              commitment to focusing and learning fast.
+            </p>
+            <p>
+              I have great enthusiasm and self-motivation to learn new things to
+              add to my skill set, one of the things I enjoy the most.
+            </p>
+            <p>
+              I'm a native Spanish speaker, English is my second language, and I
+              am also fluent in Italian.
+            </p>
+          </div>
+          <div class="skill">
+            <h3 class="text-secondary">SKILLS</h3>
+            <p>HTML</p>
+            <p>CSS / SASS</p>
+            <p>Javascript</p>
+            <p>React.js</p>
+            <p>Ruby on Rails</p>
+            <p>Node.js familiarity</p>
+          </div>
+          <div class="job job1">
+            <a href="https://www.breaklinedigital.com/" target="_blank">
+              <img src="images/breakline.png" alt="breakline" />
+            </a>
+          </div>
+          <div class="desc desc-job1">
+            <h3>Breakline Digital</h3>
+            <h4>Javscript Consultant</h4>
+            <div>
+              <p>
+                <i class="fas fa-chevron-circle-right"></i> Refactored
+                javascript widgets utilized by Discover Bank / AAA landing pages
+                to enable dynamic JSON-based configuration.
+              </p>
+              <p>
+                <i class="fas fa-chevron-circle-right"></i> Modernized existing
+                codebase to incorporate async / await fetching of bank product
+                rates.
+              </p>
             </div>
+          </div>
+          <div class="job job2">
+            <a href="https://flatironschool.com/" target="_blank">
+              <img src="images/flatiron.png" alt="flatiron" />
+            </a>
+          </div>
+          <div class="desc desc-job2">
+            <h3>Flatiron School</h3>
+            <h4>Student</h4>
+            <div>
+              <p>
+                <i class="fas fa-chevron-circle-right"></i> Immersive Full stack
+                software engineering program.
+              </p>
+              <p>
+                <i class="fas fa-chevron-circle-right"></i> This has been a
+                major decision decision in my life, gateway to transition into a
+                new career.
+              </p>
+              <p>
+                <i class="fas fa-chevron-circle-right"></i> Over 500 hours of on
+                campus learning.
+              </p>
+              <p>
+                <i class="fas fa-chevron-circle-right"></i> The curriculum
+                includes: Ruby on Rails, Javascript and React.
+              </p>
+              <p>
+                <i class="fas fa-chevron-circle-right"></i> The program's most
+                valuable gift is teaching how to learn, problem solving and
+                interacting with people that share similar interests.
+              </p>
+            </div>
+          </div>
+          <div class="job job3">
+            <a href="https://calpullidance.org/" target="_blank">
+              <img
+                src="images/Calpulli.JPG"
+                alt="Calpulli Mexican Dance Company"
+              />
+            </a>
+          </div>
+          <div class="desc desc-job3">
+            <h3>Calpulli Mexican Dance Company</h3>
+            <h4>Principal Dancer</h4>
+            <div>
+              <p>
+                <i class="fas fa-chevron-circle-right"></i> Joined the company
+                to participate in two of their ballet-folklore fusion
+                productions, Boda Mexicana, and Día de los Muertos.
+              </p>
+              <p>
+                <i class="fas fa-chevron-circle-right"></i> Calpulli has an
+                outstanding community outreach program and share the love for
+                dance and mexican culture.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
-    <footer id="main-footer">
-        by Abril <i class="fas fa-heart"></i>
-    </footer>
-    <script src="https://kit.fontawesome.com/7d0ffbca62.js" crossorigin="anonymous"></script>
-</body>
+    <footer id="main-footer">by Abril <i class="fas fa-heart"></i></footer>
+    <script
+      src="https://kit.fontawesome.com/7d0ffbca62.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

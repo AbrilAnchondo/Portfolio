@@ -21,7 +21,7 @@
       transform: rotate(-45deg) translate(7px, -6px); }
 
 .menu {
-  font-family: 'Dr Sugiyama', cursive;
+  font-family: "Dr Sugiyama", cursive;
   font-size: 18px;
   position: fixed;
   top: 0;
@@ -102,14 +102,14 @@ body {
   color: #302f2f;
   height: 100%;
   margin: 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url("../images/homeimage.jpg");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
-      content: '';
+      content: "";
       position: fixed;
       top: 0;
       right: 0;
@@ -118,12 +118,18 @@ body {
       background: rgba(212, 212, 212, 0.7);
       z-index: -1; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 400; }
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
     font-size: 6rem; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
     font-size: 2rem;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
@@ -158,7 +164,7 @@ main {
     main#home h1 {
       margin-top: 25vh; }
   main .title {
-    font-family: 'Dr Sugiyama', cursive;
+    font-family: "Dr Sugiyama", cursive;
     font-size: 8em;
     font-weight: 150; }
 
@@ -172,7 +178,7 @@ main#about .about-wrapper {
 main#about .about-info {
   display: grid;
   grid-gap: 15px;
-  grid-template-areas: 'bioimage bioimage' 'bio bio' 'skill skill' 'job1 descjob1' 'job2 descjob2' 'job3 descjob3';
+  grid-template-areas: "bioimage bioimage" "bio bio" "skill skill" "job1 descjob1" "job2 descjob2" "job3 descjob3";
   grid-template-columns: 1fr 1fr; }
 
 .bio-image {
@@ -194,7 +200,7 @@ main#about .about-info {
   background: linear-gradient(to top left, #e3e1e4, #a79da4);
   overflow: auto; }
   .bio h3 {
-    font-family: 'Dr Sugiyama', cursive;
+    font-family: "Dr Sugiyama", cursive;
     font-size: 2rem; }
 
 .skill {
@@ -209,17 +215,17 @@ main#about .about-info {
   background: linear-gradient(to bottom right, #e3e1e4, #a79da4); }
   .skill h3 {
     width: 100%;
-    font-family: 'Dr Sugiyama', cursive;
+    font-family: "Dr Sugiyama", cursive;
     font-size: 2rem; }
 
 .skill > p {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   background: #7b777c;
   color: white;
   overflow: auto; }
 
-.job-1 {
+.job1 {
   grid-area: job1;
   height: 300px;
   border-right: black 5px solid;
@@ -230,7 +236,7 @@ main#about .about-info {
   height: 300px;
   border-left: black 5px solid; }
 
-.job-2 {
+.job2 {
   grid-area: job2;
   height: 300px;
   border-right: #1e8ebb 5px solid; }
@@ -240,7 +246,7 @@ main#about .about-info {
   height: 300px;
   border-left: #1e8ebb 5px solid; }
 
-.job-3 {
+.job3 {
   grid-area: job3;
   height: 300px;
   border-right: #dac106 5px solid;
@@ -274,12 +280,16 @@ main#about .about-info {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start; }
+  .desc h3 {
+    font-weight: 600; }
+  .desc h4 {
+    margin: 8px 0; }
   .desc h6 {
     margin: 10px 0; }
   .desc ul {
     text-align: left; }
   .desc ul li {
-    margin-bottom: 5px; }
+    margin-bottom: 3px; }
 
 .projects-wrapper {
   display: flex;
@@ -290,47 +300,60 @@ main#about .about-info {
 
 .projects-container {
   display: grid;
-  grid-template-areas: 'project1 descproject1' 'project2 descproject2' 'project3 descproject3' 'project4 descproject4';
+  grid-template-areas: "project1 descproject1" "project2 descproject2" "project3 descproject3" "project4 descproject4" "project5 descproject5";
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px; }
+
+.desc .project-detail p {
+  margin: 10px 0px; }
 
 .project1 {
   grid-area: project1;
   height: 300px;
-  border-right: #6c208f 5px solid; }
+  border-right: #dac106 5px solid; }
 
 .desc-project1 {
   grid-area: descproject1;
   height: 300px;
-  border-left: #6c208f 5px solid; }
+  border-left: #dac106 5px solid; }
 
 .project2 {
   grid-area: project2;
   height: 300px;
-  border-right: #a7149a 5px solid; }
+  border-right: #6c208f 5px solid; }
 
 .desc-project2 {
   grid-area: descproject2;
   height: 300px;
-  border-left: #a7149a 5px solid; }
+  border-left: #6c208f 5px solid; }
 
 .project3 {
   grid-area: project3;
   height: 300px;
-  border-right: #dac106 5px solid; }
+  border-right: #a7149a 5px solid; }
 
 .desc-project3 {
   grid-area: descproject3;
   height: 300px;
-  border-left: #dac106 5px solid; }
+  border-left: #a7149a 5px solid; }
 
 .project4 {
   grid-area: project4;
   height: 300px;
-  border-right: #3a9211 5px solid; }
+  border-right: #e25579 5px solid; }
 
 .desc-project4 {
   grid-area: descproject4;
+  height: 300px;
+  border-left: #e25579 5px solid; }
+
+.project5 {
+  grid-area: project5;
+  height: 300px;
+  border-right: #3a9211 5px solid; }
+
+.desc-project5 {
+  grid-area: descproject5;
   height: 300px;
   border-left: #3a9211 5px solid; }
 
@@ -354,7 +377,8 @@ main#about .about-info {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.1rem; }
+  margin-bottom: 0.1rem;
+  border-radius: 5px; }
   .btn:hover, .btn-light:hover, .btn-dark:hover {
     opacity: 0.8;
     color: #6c208f; }
@@ -365,7 +389,7 @@ main#about .about-info {
   margin-top: 0.1rem; }
 
 .btn-dark {
-  background: black;
+  background: #2e2e2e;
   color: white; }
 
 main#passions .passions-wrapper {
@@ -402,7 +426,7 @@ main#passions .passions-wrapper {
   color: black;
   width: 100%;
   height: 100%;
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   font-size: 1rem;
   padding: 50px;
@@ -425,7 +449,7 @@ main#passions .passions-wrapper {
 .passion-img-container span {
   font-size: 3rem;
   color: #6c208f;
-  font-family: 'Dr Sugiyama', cursive;
+  font-family: "Dr Sugiyama", cursive;
   margin-bottom: 20px; }
 
 main#contact {
@@ -441,7 +465,7 @@ main#contact {
     width: 75%; }
   main#contact .text-fields {
     display: grid;
-    grid-template-areas: 'name email' 'subject subject' 'message message';
+    grid-template-areas: "name email" "subject subject" "message message";
     grid-gap: 0.7rem;
     margin-bottom: 1rem; }
   main#contact .name-input {
@@ -455,7 +479,7 @@ main#contact {
     height: 120px; }
   main#contact .text-input {
     padding: 0.5rem 1.5rem; }
-  main#contact button[type='submit'] {
+  main#contact button[type="submit"] {
     width: 100%;
     margin-bottom: 1rem; }
   main#contact .icons {
@@ -467,7 +491,8 @@ main#contact {
   flex-direction: column;
   align-items: center; }
 
-div.my-email, div.my-phone {
+div.my-email,
+div.my-phone {
   width: 100%;
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -477,10 +502,12 @@ div.my-email, div.my-phone {
   border-radius: 5px;
   text-align: center;
   transition: all 0.6s ease-out; }
-  div.my-email:hover, div.my-phone:hover {
+  div.my-email:hover,
+  div.my-phone:hover {
     background: #6c208f;
     color: #fff; }
-    div.my-email:hover span, div.my-phone:hover span {
+    div.my-email:hover span,
+    div.my-phone:hover span {
       color: #fff; }
 
 #contact-img#contact-img {
@@ -488,7 +515,7 @@ div.my-email, div.my-phone {
   background-attachment: fixed;
   background-size: cover; }
   #contact-img#contact-img:after {
-    content: '';
+    content: "";
     position: fixed;
     top: 0;
     right: 0;
@@ -503,7 +530,7 @@ div.my-email, div.my-phone {
   background: #a1a1a1;
   color: #302f2f;
   height: 65px;
-  font-family: 'Dr Sugiyama', cursive;
+  font-family: "Dr Sugiyama", cursive;
   font-size: 1.5rem; }
   #main-footer .fa-heart {
     font-size: 1rem; }
@@ -539,11 +566,13 @@ div.my-email, div.my-phone {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
-  ul.menu-nav, div.menu-branding {
+  ul.menu-nav,
+  div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0; }
-    ul.menu-nav.show, div.menu-branding.show {
+    ul.menu-nav.show,
+    div.menu-branding.show {
       transform: translate3d(0, 0, 0);
       border-bottom: 1mm ridge #6c208f; }
   .menu-nav {
@@ -559,9 +588,10 @@ div.my-email, div.my-phone {
       width: 100%;
       background-size: 100%;
       background-repeat: no-repeat; }
-  .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'skill' 'job1' 'descjob1' 'job2' 'descjob2' 'job3' 'descjob3';
-    grid-template-columns: 1fr; }
+  main#about .about-info {
+    grid-template-areas: "bioimage" "bio" "skill" "job1" "descjob1" "job2" "descjob2" "job3" "descjob3";
+    grid-template-columns: 1fr;
+    text-align: left; }
   .bio {
     overflow: auto;
     padding: 3rem 3rem; }
@@ -570,15 +600,16 @@ div.my-email, div.my-phone {
   .job img {
     object-fit: fill; }
   .projects-container {
-    grid-template-areas: 'project1' 'descproject1' 'project2' 'descproject2' 'project3' 'descproject3' 'project4' 'descproject4';
-    grid-template-columns: 1fr; }
+    grid-template-areas: "project1" "descproject1" "project2" "descproject2" "project3" "descproject3" "project4" "descproject4" "project5" "descproject5";
+    grid-template-columns: 1fr;
+    text-align: left; }
   .flex-grid .gallery-column {
     flex: 100%;
     max-width: 100%; }
   main#passions .overlay.description {
     padding: 40px; }
   main#contact .text-fields {
-    grid-template-areas: 'name' 'subject' 'email' 'message'; }
+    grid-template-areas: "name" "subject" "email" "message"; }
   main#contact .form-container {
     margin: 0 10%; } }
 
