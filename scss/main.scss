@@ -25,25 +25,20 @@ h3 {
 
   //this refers to a class of lg-heading attached not nested within it, to h1,h1 or h3 and not a class lg-heading nested within, so I need an & meaning an h1 with its own class lg heading
   //rem is a multiplier of the font size (1rem is 16px)
-  //rgb to see through
+  //rgba to see through
+
   &.lg-heading {
     font-size: 6rem;
   }
 
-  &.sm-heading {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
-  }
+  // &.sm-heading {
+  //   font-size: 2rem;
+  //   margin-bottom: 2rem;
+  //   padding: 0.2rem 1rem;
+  //   background: rgba(lighten($primary-color, 2), 0.5);
+  // }
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-//the bigger z index the closer it appears
 header {
   position: fixed;
   z-index: 2;
@@ -71,9 +66,9 @@ main {
 
     a {
       padding: 0.5rem;
-      color: white;
+      color: $secondary-color;
       &:hover {
-        color: $secondary-color;
+        color: black;
         @include easeOut();
       }
     }
@@ -85,12 +80,17 @@ main {
     overflow: hidden;
     h1 {
       margin-top: 25vh;
+      color: $primary-color;
+    }
+
+    h2 {
+      color: whitesmoke;
     }
   }
 
   .title {
     font-family: "Dr Sugiyama", cursive;
-    font-size: 8em;
+    font-size: 6em;
     font-weight: 150;
   }
 }
@@ -104,41 +104,40 @@ main#about {
     width: 100%;
   }
 
+  .calpulli {
+    grid-area: calpulli;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    object-fit: cover;
+  }
+
+  .flatiron {
+    grid-area: flatiron;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    object-fit: cover;
+  }
+
   .about-info {
     display: grid;
-    grid-gap: 15px;
-    grid-template-areas:
-      "bioimage bioimage"
-      "bio bio"
-      "skill skill"
-      "job1 descjob1"
-      "job2 descjob2"
-      "job3 descjob3";
-    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas: "calpulli bio bio flatiron";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}
-
-//creating grid areas
-.bio-image {
-  grid-area: bioimage;
-  margin: auto;
-  //height: 300px;
-  height: 450px;
-  width: 100%;
-  border-radius: 5px;
-  box-shadow: $box-shadow;
-  object-fit: cover;
 }
 
 .bio {
   grid-area: bio;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: left;
-  padding: 3rem 6rem;
-  height: 600px;
+  padding: 1rem 2rem;
+  height: 100%;
   border-radius: 5px;
-  background: linear-gradient(to top left, #e3e1e4, #a79da4);
-  overflow: auto;
+  background: linear-gradient(to top left, #f4f3f5, #d4cad2);
 
   h3 {
     font-family: "Dr Sugiyama", cursive;
@@ -154,102 +153,38 @@ main#about {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 6rem;
-  background: linear-gradient(to bottom right, #e3e1e4, #a79da4);
-
-  h3 {
-    width: 100%;
-    font-family: "Dr Sugiyama", cursive;
-    font-size: 2rem;
+  padding: 1rem 2rem;
+  //background: linear-gradient(to bottom right, #e3e1e4, #a79da4);
+  background: transparent;
+  .skillset {
+    background: black;
   }
 }
 
 .skill > p {
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  background: rgb(123, 119, 124);
+  //background: $secondary-color;
+  background: linear-gradient(to bottom right, #020202, $secondary-color);
   color: white;
   overflow: auto;
-}
-
-.job1 {
-  grid-area: job1;
-  height: 300px;
-  border-right: black 5px solid;
-  background: url("images/breakline.png");
-}
-
-.desc-job1 {
-  grid-area: descjob1;
-  height: 300px;
-  border-left: black 5px solid;
-}
-
-.job2 {
-  grid-area: job2;
-  height: 300px;
-  border-right: rgb(30, 142, 187) 5px solid;
-}
-
-.desc-job2 {
-  grid-area: descjob2;
-  height: 300px;
-  border-left: rgb(30, 142, 187) 5px solid;
-}
-
-.job3 {
-  grid-area: job3;
-  height: 300px;
-  border-right: rgb(218, 193, 6) 5px solid;
-  background-color: white;
-}
-
-.desc-job3 {
-  grid-area: descjob3;
-  height: 300px;
-  border-left: rgb(218, 193, 6) 5px solid;
-}
-
-.job {
-  background: lighten($primary-color, 5);
-  border-radius: 5px;
-
-  &:hover {
-    opacity: 0.6;
-    @include easeOut;
-  }
-}
-
-.job img {
-  object-fit: fill;
-  width: 100%;
-  height: 300px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
 }
 
 .desc {
   background: lighten($primary-color, 5);
   padding: 1.5rem;
   border-radius: 5px;
-  overflow: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-
-  //check this style
-  //   h3 {
-  //     font-family: "Dr Sugiyama", cursive;
-  //     font-size: 2rem;
-  //   }
 
   h3 {
     font-weight: 600;
   }
 
   h4 {
-    margin: 8px 0;
+    margin: 0;
   }
 
   h6 {
@@ -277,6 +212,7 @@ main#about {
 .projects-container {
   display: grid;
   grid-template-areas:
+    "skill skill"
     "project1 descproject1"
     "project2 descproject2"
     "project3 descproject3"
@@ -294,63 +230,63 @@ main#about {
 
 .project1 {
   grid-area: project1;
-  height: 300px;
+  height: 450px;
   border-right: rgb(218, 193, 6) 5px solid;
 }
 
 .desc-project1 {
   grid-area: descproject1;
-  height: 300px;
+  height: 450px;
   border-left: rgb(218, 193, 6) 5px solid;
 }
 
 .project2 {
   grid-area: project2;
-  height: 300px;
+  height: 450px;
   border-right: $secondary-color 5px solid;
 }
 
 .desc-project2 {
   grid-area: descproject2;
-  height: 300px;
+  height: 450px;
   border-left: $secondary-color 5px solid;
 }
 
 .project3 {
   grid-area: project3;
-  height: 300px;
+  height: 450px;
   //border-right: rgb(218, 193, 6) 5px solid;
   border-right: rgb(167, 20, 154) 5px solid;
 }
 
 .desc-project3 {
   grid-area: descproject3;
-  height: 300px;
+  height: 450px;
   //border-left: rgb(218, 193, 6) 5px solid;
   border-left: rgb(167, 20, 154) 5px solid;
 }
 
 .project4 {
   grid-area: project4;
-  height: 300px;
+  height: 450px;
   border-right: rgb(226, 85, 121) 5px solid;
 }
 
 .desc-project4 {
   grid-area: descproject4;
-  height: 300px;
+  height: 450px;
   border-left: rgb(226, 85, 121) 5px solid;
 }
 
 .project5 {
   grid-area: project5;
-  height: 300px;
+  height: 450px;
   border-right: rgb(58, 146, 17) 5px solid;
 }
 
 .desc-project5 {
   grid-area: descproject5;
-  height: 300px;
+  height: 450px;
   border-left: rgb(58, 146, 17) 5px solid;
 }
 
@@ -358,7 +294,7 @@ main#about {
   object-fit: cover;
   object-position: 0% 8%;
   width: 100%;
-  height: 300px;
+  height: 450px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   box-shadow: $box-shadow;
@@ -366,7 +302,10 @@ main#about {
 
 .projects-container .desc {
   .btn-links {
-    width: 100%;
+    width: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 .project {
@@ -378,12 +317,14 @@ main#about {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.1rem;
+  margin: 0.1rem;
   border-radius: 5px;
+  background: black;
+  color: whitesmoke;
 
   &:hover {
-    opacity: 0.8;
-    color: $secondary-color;
+    color: white;
+    background: $secondary-color;
   }
 }
 
@@ -400,7 +341,7 @@ main#about {
   color: white;
 }
 
-// Other interests - flex grid
+// Hobbies - flex grid
 main#passions {
   .passions-wrapper {
     display: flex;
@@ -539,45 +480,26 @@ main#contact {
   align-items: center;
 }
 
-div.my-email,
-div.my-phone {
-  width: 100%;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  box-shadow: $box-shadow;
-  background: rgba(lighten($primary-color, 2), 1);
-  border-radius: 5px;
-  text-align: center;
-  @include easeOut;
-
-  &:hover {
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
-    span {
-      color: set-text-color($secondary-color);
-    }
-  }
-}
-
 #contact-img {
   @include contact;
 }
 
 // Footer
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: darken($primary-color, 20);
-  color: set-text-color($primary-color);
-  height: 65px;
-  font-family: "Dr Sugiyama", cursive;
-  font-size: 1.5rem;
+// #main-footer {
+//   text-align: center;
+//   padding: 1rem;
+//   // background: darken($primary-color, 20);
+//   // color: set-text-color($primary-color);
+//   background: rgb(128, 113, 138);
+//   color: whitesmoke;
+//   height: 65px;
+//   font-family: "Dr Sugiyama", cursive;
+//   font-size: 1.5rem;
 
-  .fa-heart {
-    font-size: 1rem;
-  }
-}
+//   .fa-heart {
+//     font-size: 1rem;
+//   }
+// }
 
 //media queries should run after the initial css
 @import "mobile";
