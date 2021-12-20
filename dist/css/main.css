@@ -427,7 +427,7 @@ main#contact {
       line-height: 1;
       margin-bottom: 1rem; }
   .navbar {
-    height: 120px;
+    height: 75px;
     flex-wrap: wrap;
     flex-direction: column;
     padding: 20px; }
