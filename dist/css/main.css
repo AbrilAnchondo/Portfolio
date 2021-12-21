@@ -125,7 +125,7 @@ main#about .about-info {
   grid-template-areas: "calpulli bio bio flatiron";
   grid-template-columns: 1fr 1fr 1fr 1fr; }
 
-.bio {
+main#about .bio {
   grid-area: bio;
   font-size: 1rem;
   text-align: left;
@@ -133,7 +133,7 @@ main#about .about-info {
   height: 100%;
   border-radius: 5px;
   background: linear-gradient(to top left, #f4f3f5, #d4cad2); }
-  .bio h3 {
+  main#about .bio h3 {
     font-family: "Dr Sugiyama", cursive;
     font-size: 2rem; }
 
@@ -430,24 +430,22 @@ main#contact {
     height: 75px;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 20px; }
+    padding: 20px 20px; }
   .navbar a {
-    padding: 10px 10px;
+    padding: 5px 5px;
     margin: 0 3px; }
   main#about .about-info {
     grid-template-areas: "calpulli" "bio" "flatiron";
     grid-template-columns: 1fr;
     text-align: left; }
-  .bio {
-    padding: 2rem 2rem; }
+  main#about .bio {
+    padding: 1.5rem 2rem; }
   .skill {
     flex-direction: column;
     align-items: center; }
   .skill > p {
     width: 50%;
     text-align: center; }
-  .job img {
-    object-fit: fill; }
   .projects-container {
     grid-template-areas: "skill" "project1" "descproject1" "project2" "descproject2" "project3" "descproject3" "project4" "descproject4" "project5" "descproject5";
     grid-template-columns: 1fr;
@@ -467,8 +465,18 @@ main#contact {
     margin-top: 10vh; }
   main .lg-heading {
     font-size: 5rem; }
+  main {
+    padding-right: 2rem;
+    padding-left: 2rem; }
   .flex-grid .gallery-column {
     flex: 100%;
     max-width: 100%; }
   main#about .bio {
-    padding: 3rem 3rem; } }
+    padding: 1rem 1.5rem; }
+  .desc-project5 {
+    height: 550px; }
+  .navbar {
+    padding: 10px 10px; }
+  .navbar a {
+    padding: 0px 0px;
+    margin: 0 5px; } }

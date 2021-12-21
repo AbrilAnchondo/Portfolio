@@ -128,20 +128,19 @@ main#about {
     grid-template-areas: "calpulli bio bio flatiron";
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}
+  .bio {
+    grid-area: bio;
+    font-size: 1rem;
+    text-align: left;
+    padding: 1rem 2rem;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to top left, #f4f3f5, #d4cad2);
 
-.bio {
-  grid-area: bio;
-  font-size: 1rem;
-  text-align: left;
-  padding: 1rem 2rem;
-  height: 100%;
-  border-radius: 5px;
-  background: linear-gradient(to top left, #f4f3f5, #d4cad2);
-
-  h3 {
-    font-family: "Dr Sugiyama", cursive;
-    font-size: 2rem;
+    h3 {
+      font-family: "Dr Sugiyama", cursive;
+      font-size: 2rem;
+    }
   }
 }
 
