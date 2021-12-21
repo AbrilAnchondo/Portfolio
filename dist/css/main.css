@@ -44,6 +44,11 @@ body {
     background: url("../images/portrait.jpeg");
     background-attachment: fixed;
     background-size: cover; }
+    @media (max-width: 500px) {
+      body#bg-img {
+        background: url("../images/portrait-mobile.jpeg") no-repeat;
+        background-attachment: fixed;
+        background-size: cover; } }
     body#bg-img:after {
       content: "";
       position: fixed;

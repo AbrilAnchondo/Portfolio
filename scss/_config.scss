@@ -2,6 +2,7 @@ $primary-color: whitesmoke;
 $secondary-color: rgb(108, 32, 143);
 $show-home-image: true;
 $home-image: url("../images/portrait.jpeg");
+$home-image-mobile: url("../images/portrait-mobile.jpeg");
 $show-contact-image: true;
 $contact-image: url("../images/vintagePhone.jpg");
 $background-opacity: 0.4;
@@ -20,6 +21,11 @@ $box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
+      @media (max-width: 500px) {
+        background: $home-image-mobile no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
 
       //absolute to cover the whole body
       &:after {
